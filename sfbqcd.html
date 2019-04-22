@@ -21,11 +21,25 @@
     <title>Welcome to San Francisco Bay Queer Contra Dance</title>
 
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <!--<link href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" rel="stylesheet">-->
+  <link href="css/ekko-lightbox.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <style>
+  /* Make the image fully responsive */
+  .carousel-inner img {
+      width: 100%;
+      height: 100%;
+  }
+  </style>
 
+    <!-- Bootstrap CSS -->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">-->
     <!-- SFBQCD custom CSS -->
     <link rel="stylesheet" href="css/sfbqcd.css">
+    <link rel="stylesheet" href="css/bootstrap-lightbox">
 
   </head>
   <body>
@@ -36,7 +50,7 @@
 <!--<nav class="navbar navbar-light" style="background-color: #e3f2fd;">-->
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color:#6f42c1;">
   <div class="navbar-brand">
-      <a class="navbar-brand mr-4" href="#">
+      <a class="navbar-brand mr-4" href="index.html">
       <!--<img src="images/circle_left_by_Rebekah_Laurel_Mortensen.jpg" class="img-fluid" style="width:2em; height:2em"/>-->
         <font color="black">San Francisco Bay Queer Contra Dance</font></a>
   </div>
@@ -73,9 +87,9 @@
 
   <div class="row justify-content-center">
      <div class="column" style="padding-right:100px">
-      <h5><a href="Circle_Left.html"><center>Circle Left <br/></center></a>
+      <h5><a href="circle_left.html"><center>Circle Left <br/></center></a>
            <br/>
-           <!--<a href="Circle_Left.html">-->
+           <!--<a href="circle_left.html">-->
            <!--<img src="images/circle_left_by_Rebekah_Laurel_Mortensen.jpg" width=250 class="mr-2 mb-2 img-fluid img-thumbnail rounded center"/>-->
            <!--</a>-->
            <!--<center><p><small>2nd Friday in Oakland</small></p></center>-->
@@ -92,9 +106,9 @@
       </h5>
      </div>
      <div class="column">
-       <h5><a href="PA_Nameless.html"><center>Peninsula Gender-free<br/></center></a>
+       <h5><a href="pa.html"><center>Peninsula Gender-free<br/></center></a>
            <br/>
-           <!--<a href="PA_Nameless.html">-->
+           <!--<a href="pa.html">-->
            <!--<img src="images/pa_gender_free_Dane.jpg" width=250 height="228" class="center"/>-->
            <!--</a>-->
            <!--<center><p><small>ith Friday in Palo Alto</small></p></center>-->
@@ -133,7 +147,12 @@
             but we were one of the first dances to switch to <b>larks</b> and <b>ravens</b>. 
             Now many dances across the country (and several in the Bay Area[link!]) are using those terms. </br></br>
 
-            The <b>Peninsula Gender Free Dance</b> ....
+            The <b>Peninsula Gender Free Dance</b> started the first dance in April 2019. 
+            Some of us on the Peninsula have been crossing the bay to Circle Left every month over the years.
+            We would really love to bring the same energy and the love of the community to out side of the bay 
+            (Circle Left once a month is really not enough). 
+            We share the same goal of attracting young people and queer people, and de-genderize 
+            dancing roles so that everybody can enjoy dancing with everyone else. We use <b>larks</b> and <b>ravens</b> calling.  
            </p>
         </div>
        
@@ -165,7 +184,7 @@
 <!-- Code of conduct-->
 <div class="container-fluid anchor-container" id="conduct" style="background-color: #E3E4FA">
     <!--<div class="row justify-content-center">-->
-        <div class="col-lg-8">
+    <div class="col-lg-8">
     <h2> Code of conduct </h2>
     To Be Announced<br/>
     <!--</div>-->
@@ -173,67 +192,199 @@
 </div>
 
 <!-- Resources -->
-<div class="container-fluid anchor-container" id="resources" style="background-color: #FFFFFF">
-    <!--<div class="row justify-content-center">-->
-    <div class="col-lg-8">
-    <h2> Resources </h2>
-<!-- Images used to open the lightbox -->
-<div class="row">
-  <div class="column">
-    <img src="images/image1.jpg" width="300" height="150" onclick="openModal();currentSlide(1)" class="hover-shadow">
+<div class="container-fluid anchor-container" id="resources">
+    <h3> Resources <br/></h3>
+    <div class="row">
+        <div class="col-lg-4 col-md-6 p-2">
+            <div class="card">
+                <h8 class="card-header"><b>Gender-free Contra in-depth</b></h8>
+                <div class="card-body">
+                 <br>A few links to more in-depth discussions on how gender-free contra has been evolving in the queer and folk communty 
+                 <li><a href="http://www.ruthiebyers.com/2014/12/20/gender-free-berkeley-contra.html">Gender Free Dancing is for Everyone</a></li>
+                 <li><a href="https://www.jefftk.com/p/gender-free-role-term-usage">Gender-Free Role Term Usage</a></li>
+                 <li><a href="http://contradances.tumblr.com/post/113203981035/genderfree-contra-dance-term-faq">Genderfree Contra Dance Term FAQ</a></li>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-8 col-md-6 p-2">
+            <div class="card">
+                <h8 class="card-header"><b>Other Gender-role-free Dances</b></h8>
+                <div class="card-body">
+                    <br>There are several contra dance groups across the U.S. which don't fuss about gender. The umbrella organization <a href="http://www.lcfd.org/">Lavender Country and Folk Dancers</a> (LCFD) includes most of them (including Queer Contra Dance) and is also a good source for more information about gender-free dancing.
+                    <ul>
+                        <li><a href="circleleft.html">Circle Left - Oakland</a>
+                        <li><a href="http://www.lcfd.org/jp/">Boston</a>
+                        <li><a href="http://lcfd.org/queer-contra-dance-chicago.html">Queer Contra Dance Chicago</a>
+                        <li><a href="http://www.villagecontra.org/">Village Contra - New York City</a>
+                        <li><a href="http://www.lcfd.org/westma/">Western Massachusetts</a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 p-2">
+            <div class="card">
+                <h8 class="card-header"><b>Bay Area Contra Dances</b></h8>
+                <div class="card-body">
+                  <li><a href="http://www.bacds.org/">San Francisco and environs (BACDS)</a></li>
+                  <li><a href="http://www.nbcds.org/">Marin and Sonoma (NBCDS)</a></li>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 p-2">
+            <div class="card">
+                <h8 class="card-header"><b>Bay Area LGBTQ</b></h8>
+                <div class="card-body">
+                    <li><a href="http://www.all8.com/sd/links/baclubs.htm">Lesbian/Gay Square Dance Clubs</a>
+                    <li><a href="http://www.queerballroom.com/">Queer Ballroom</a>
+                    <li><a href="http://www.sundancesaloon.org/index.html">Sundance Saloon</a>
+                    <li><a href="http://www.texasrosedance.com/">Texas Rose Country Western Dance</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 p-2">
+            <div class="card">
+                <h8 class="card-header"><b>Additional Links</b></h8>
+                <div class="card-body">
+                    <ul>
+                        <li><a href="http://www.trycontra.com/">Try Contra</a>
+                        <li><a href="http://www.sfqueer.com/">Queer things to do in the San Francisco Bay Area</a>
+                        <li><a  href="http://www.outbeatradio.org/?p=250">Queer Contra Radio </a>
+                        <li><a  href="http://www.npr.org/templates/story/story.php?storyId=128273050">Youth Flocking to Contra Dancing </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    
+<!-- media -->
+<!-- pictures -->
+<div id="pictures" class="carousel slide" data-ride="carousel" style="width: 1200px; height:500px; margin: 0 auto">
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#pictures" data-slide-to="0" class="active"></li>
+    <li data-target="#pictures" data-slide-to="1"></li>
+    <li data-target="#pictures" data-slide-to="2"></li>
+    <li data-target="#pictures" data-slide-to="3"></li>
+    <li data-target="#pictures" data-slide-to="4"></li>
+    <li data-target="#pictures" data-slide-to="5"></li>
+    <li data-target="#pictures" data-slide-to="6"></li>
+    <li data-target="#pictures" data-slide-to="7"></li>
+  </ul>
+  
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active" style="height:500px">
+     <a href="images/image1.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+      <img src="images/image1.jpg" width="800" height="500">
+      <!--<img src="images/image1.jpg" alt="Los Angeles" width="1100" height="500">-->
+     </a>
+    </div>
+    <div class="carousel-item"  style="height:500px">
+     <a href="images/image2.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+      <img src="images/image2.jpg" width="800" height="500">
+     </a>
+    </div>
+    <div class="carousel-item"  style="height:500px">
+     <a href="images/image0.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+      <img src="images/image0.jpg" width="800" height="500">
+     </a>
+    </div>
+
+    <div class="carousel-item"  style="height:500px">
+     <a href="images/image4.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+      <img src="images/image4.jpg" width="800" height="500">
+     </a>
+    </div>
+    <div class="carousel-item"  style="height:500px">
+     <a href="images/image5.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+      <img src="images/image5.jpg" width="800" height="500">
+     </a>
+    </div>
+    <div class="carousel-item"  style="height:500px">
+     <a href="images/pa0.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+      <img src="images/pa0.jpg" width="800" height="500">
+     </a>
+    </div>
+    <div class="carousel-item"  style="height:500px">
+     <a href="images/pa1.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+      <img src="images/pa1.jpg" width="800" height="500">
+     </a>
+    </div>
+    <div class="carousel-item"  style="height:500px">
+     <a href="images/qcc0.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+      <img src="images/qcc0.jpg" width="800" height="500">
+     </a>
+    </div>
+
+
+
   </div>
-  <div class="column">
-    <img src="images/image2.jpg" width="300" height="150" onclick="openModal();currentSlide(2)" class="hover-shadow">
-  </div>
-  <div class="column">
-    <img src="images/image3.jpg" width="300" height="150" onclick="openModal();currentSlide(3)" class="hover-shadow">
-  </div>
-  <div class="column">
-    <img src="images/image4.jpg" width="300" height="150" onclick="openModal();currentSlide(4)" class="hover-shadow">
-  </div>
+  
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#pictures" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#pictures" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+<!--</div>-->
+
+<!-- videos -->    
+    <!-- Queer Camp 2018 -->
+    <div class="col-lg-3 col-md-6 p-2">
+    <iframe width="300" height="150" src="https://www.youtube.com/embed/RNszzBiLd7k?start=24" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    
+    <!-- Next-gen 2018 -->
+    <div class="col-lg-3 col-md-6 p-2">
+        <iframe width="300" height="150" src="https://www.youtube.com/embed/DKF_XfpJYEA?start=24" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    
+    <!-- Introduction to Contra -->
+    <div class="col-lg-3 col-md-6 p-2">
+    <iframe width="300" height="150" src="https://www.youtube.com/embed/14nxFdcaKWA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    
+    <!-- YDW 2018 -->
+    <div class="col-lg-3 col-md-6 p-2">
+    <iframe width="300" height="150" src="https://www.youtube.com/embed/RcHLEq0UWbo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    </div>
 </div>
 
-<!-- The Modal/Lightbox -->
-<div id="myModal" class="modal">
-  <span class="close cursor" onclick="closeModal()">&times;</span>
-  <div class="modal-dialog modal-lg">
-  <div class="modal-content">
-    <div class="mySlides">
-      <div class="numbertext">1 / 4</div>
-      <img src="images/image1.jpg" style="width:100%">
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">2 / 4</div>
-      <img src="images/image2.jpg" style="width:100%">
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">3 / 4</div>
-      <img src="images/image3.jpg" style="width:100%">
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">4 / 4</div>
-      <img src="images/image4.jpg" style="width:100%">
-    </div>
-    <!-- Next/previous controls -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-    <!-- Caption text -->
-    <div class="caption-container">
-      <p id="caption"></p>
-    </div>
-
-  </div>
-  </div>
-</div>
 
 
+<!--<div class="row justify-content-center">-->
+    <!--<div class="col-md-8">-->
+        <!--<div class="row">-->
+            <!--<a href="images/image1.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">-->
+                <!--<img src="images/image1.jpg" class="img-fluid">-->
+            <!--</a>-->
+            <!--<a href="images/image2.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">-->
+                <!--<img src="images/image2.jpg" class="img-fluid">-->
+            <!--</a>-->
+            <!--<a href="images/image3.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">-->
+                <!--<img src="images/image3.jpg" class="img-fluid">-->
+            <!--</a>-->
+        <!--</div>-->
+        <!--<div class="row">-->
+            <!--<a href="https://unsplash.it/1200/768.jpg?image=254" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">-->
+                <!--<img src="https://unsplash.it/600.jpg?image=254" class="img-fluid">-->
+            <!--</a>-->
+            <!--<a href="https://unsplash.it/1200/768.jpg?image=255" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">-->
+                <!--<img src="https://unsplash.it/600.jpg?image=255" class="img-fluid">-->
+            <!--</a>-->
+            <!--<a href="https://unsplash.it/1200/768.jpg?image=256" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">-->
+                <!--<img src="https://unsplash.it/600.jpg?image=256" class="img-fluid">-->
+            <!--</a>-->
+        <!--</div>-->
     <!--</div>-->
-    </div>
-</div>
+<!--</div>-->
 
 <!-- What are we -->
 <!--<div class="container-fluid anchor-container" id="what"  style="background-color: #FFC0CB">-->
@@ -337,27 +488,98 @@
 
 
     <!-- bootstrap JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <!--<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>-->
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>-->
 
-<script>
-/* random order for board members and other volunteers */
-$.fn.randomize = function(selector){
-    (selector ? this.find(selector) : this).parent().each(function(){
-        $(this).children(selector).sort(function(){
-            return Math.random() - 0.5;
-        }).detach().appendTo(this);
-    });
-
-    return this;
-};
-
-$('.randomized').randomize('.rnd-board');
-$('.randomized').randomize('.rnd-others');
-$('.randomized').randomize('.rnd-emeritus');
-
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+            
+                    <!-- for documentation only -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.2.1/anchor.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function ($) {
+      // delegate calls to data-toggle="lightbox"
+      $(document).on('click', '[data-toggle="lightbox"]:not([data-gallery="navigateTo"]):not([data-gallery="example-gallery-11"])', function(event) {
+          event.preventDefault();
+          return $(this).ekkoLightbox({
+              onShown: function() {
+                  if (window.console) {
+                      return console.log('Checking our the events huh?');
+                  }
+              },
+              onNavigate: function(direction, itemIndex) {
+                  if (window.console) {
+                      return console.log('Navigating '+direction+'. Current item: '+itemIndex);
+                  }
+              }
+          });
+      });
+  
+      // disable wrapping
+      $(document).on('click', '[data-toggle="lightbox"][data-gallery="example-gallery-11"]', function(event) {
+          event.preventDefault();
+          return $(this).ekkoLightbox({
+              wrapping: false
+          });
+      });
+  
+      //Programmatically call
+      $('#open-image').click(function (e) {
+          e.preventDefault();
+          $(this).ekkoLightbox();
+      });
+      $('#open-youtube').click(function (e) {
+          e.preventDefault();
+          $(this).ekkoLightbox();
+      });
+  
+      // navigateTo
+      $(document).on('click', '[data-toggle="lightbox"][data-gallery="navigateTo"]', function(event) {
+          event.preventDefault();
+          return $(this).ekkoLightbox({
+              onShown: function() {
+                  this.modal().on('click', '.modal-footer a', function(e) {
+                      e.preventDefault();
+                      this.navigateTo(2);
+                  }.bind(this));
+              }
+          });
+      });
+  
+      /**
+       * Documentation specific - ignore this
+       */
+      anchors.options.placement = 'left';
+      anchors.add('h3');
+      $('code[data-code]').each(function() {
+  
+          var $code = $(this),
+              $pair = $('div[data-code="'+$code.data('code')+'"]');
+  
+          $code.hide();
+          var text = $code.text($pair.html()).html().trim().split("\n");
+          var indentLength = text[text.length - 1].match(/^\s+/)
+          indentLength = indentLength ? indentLength[0].length : 24;
+          var indent = '';
+          for(var i = 0; i < indentLength; i++)
+              indent += ' ';
+          if($code.data('trim') == 'all') {
+              for (var i = 0; i < text.length; i++)
+                  text[i] = text[i].trim();
+          } else  {
+              for (var i = 0; i < text.length; i++)
+                  text[i] = text[i].replace(indent, '    ').replace('    ', '');
+          }
+          text = text.join("\n");
+          $code.html(text).show();
+  
+      });
+  });
 </script>
 
 <script>
@@ -458,50 +680,6 @@ $(function(){
     onload = function(){
         document.getElementById("lastModified").innerHTML = "Page last changed " + document.lastModified.split(" ")[0];
     }
-</script>
-
-
-<script>
-// Open the Modal
-function openModal() {
-  document.getElementById('myModal').style.display = "block";
-}
-
-// Close the Modal
-function closeModal() {
-  document.getElementById('myModal').style.display = "none";
-}
-
-var slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  var captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
-}
 </script>
 
 </body>
