@@ -6,9 +6,16 @@
     background-size: cover;
     min-height: 350px;
     margin-bottom:0px;
-    background-position: center -300px;
+    background-position: 50%;
     color: white;
     text-shadow: black 2em 2em 2em;
+}
+
+.container-fluid {
+    background-color:#D5F5E3;
+    padding-left: 5%;
+    padding-top: 10px;
+    padding-bottom: 20px;
 }
 
 .section_div_img {
@@ -16,17 +23,9 @@
     margin-top: 5em;
     margin-bottom: 5em;
 }
-.container-fluid {
-    background-color:#D5F5E3;
-}
-
-.container-fluid r{
-    /*background-color:#F5B7B1;*/
-}
-
 
 .anchor-container {
-    padding-top: 10px;
+    padding-top: 20px;
 }
 
 .topspacer {
@@ -50,4 +49,20 @@
 .navbar-custom {
     background-color: #1E90FF !important;
     color: #FFFFFF !important;
+}
+
+.iframe-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+    /*padding-bottom: 56.25%;*/
+}
+
+.iframe-container iframe {
+  position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 95%;
+    border: 0;
 }

@@ -12,16 +12,22 @@ a.anchor{
     background-size: cover;
     min-height: 350px;
     margin-bottom:0px;
-    background-position: center -400px;
+    background-position: 50%;
     background-color:#FFC0CB;
     color: black;;
     /*text-shadow: black 2em 2em 2em;*/
     /*padding-left: 200px;*/
 }
 
+/*.container-fluid {*/
+    /*padding-left: 100px;*/
+    /*padding-right: 100px;*/
+    /*padding-top: 10px;*/
+    /*padding-bottom: 20px;*/
+/*}*/
+
 .container-fluid {
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 5%;
     padding-top: 10px;
     padding-bottom: 20px;
 }
