@@ -4,9 +4,11 @@
 .jumboback {
     background-image: url('../images/image5.jpg');
     background-size: cover;
-    min-height: 350px;
+    min-height: 400px;
+    /*height: 60%;*/
+    height: 100%;
     margin-bottom:0px;
-    background-position: 50%;
+    background-position: center 30%;
     color: white;
     text-shadow: black 2em 2em 2em;
 }

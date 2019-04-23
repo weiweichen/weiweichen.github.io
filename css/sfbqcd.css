@@ -1,18 +1,11 @@
 @charset "utf-8";
 /* CSS Document */
-a.anchor{
-    display: block;
-    height: 0px; /*same height as header*/
-    margin-top: 50px; /*same height as header*/
-    visibility: hidden;
-}
-
 .jumboback {
     /*background-image: url('../images/image0.jpg');*/
     background-size: cover;
     min-height: 50px;
     margin-bottom:0px;
-    background-position: center -400px;
+    background-position: 50%;
     background-color:#E3E4FA;
     color: black;;
     /*text-shadow: black 2em 2em 2em;*/
@@ -21,8 +14,7 @@ a.anchor{
 
 
 .container-fluid {
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 5%;
     padding-top: 10px;
     padding-bottom: 20px;
 }
