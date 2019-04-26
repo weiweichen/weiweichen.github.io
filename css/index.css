@@ -32,6 +32,15 @@ a.anchor{
     padding-bottom: 20px;
 }
 
+.container-fluid-iframe {
+    padding-left: 0%;
+    padding-right: 0%;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+
+
 .section_div_img {
     width: 100%;
     margin-top: 5em;
@@ -64,40 +73,22 @@ a.anchor{
     background-color: #1E90FF !important;
     color: #FFFFFF !important;
 }
-
-.resp-container {
-    position: relative;
-    overflow: hidden;
-    padding-top: 56.25%;
-    height: 50%;
-}
-
-.resp-iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    border: 0;
-}
-
-.embed-responsive-9by4{
-   padding-bottom: 40%;
-}
-
 .iframe-container {
     position: relative;
     overflow: hidden;
-    padding-top: 56.25%;
-    width: 100%;
-    /*padding-bottom: 56.25%;*/
+    padding-top: 25%;
+    max-width: 100%;
+    height: 380px;
+    /*padding-bottom: ;*/
 }
 
-.iframe-container iframe {
+.iframe-container iframe, 
+.viframe-container object,  
+.viframe-container embed {
   position: absolute;
     top: 5%;
-    left: 10%;
-    width: 80%;
-    height: 300px;
+    padding-left: 10%;
+    width: 90%;
+    height: 350px;
     border: 0;
 }
