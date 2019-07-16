@@ -13,7 +13,8 @@ a.anchor{
     min-height: 350px;
     margin-bottom:0px;
     background-position: 50%;
-    background-color:#FFC0CB;
+    /*background-color:#FFC0CB;*/
+    background-color:#E3E4FA;
     color: black;;
     /*text-shadow: black 2em 2em 2em;*/
     /*padding-left: 200px;*/
