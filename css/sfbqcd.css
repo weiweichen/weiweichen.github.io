@@ -68,3 +68,9 @@
     height: 95%;
     border: 0;
 }
+
+.bio-photo {
+    width: 10rem;
+    margin-right: .5rem;
+    margin-bottom: .5rem;
+}
