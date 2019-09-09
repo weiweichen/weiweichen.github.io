@@ -20,10 +20,9 @@
 
     <title>Welcome to San Francisco Bay Queer Contra Dance</title>
 
-    <!-- Bootstrap CSS -->
-    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">-->
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <!--<link href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" rel="stylesheet">-->
   <link href="css/ekko-lightbox.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -35,22 +34,25 @@
       height: 100%;
   }
   </style>
-    <!-- index custom CSS -->
-    <link rel="stylesheet" href="css/index.css">
+
+    <!-- Bootstrap CSS -->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">-->
+    <!-- SFBQCD custom CSS -->
+    <link rel="stylesheet" href="css/sfbqcd.css">
     <link rel="stylesheet" href="css/bootstrap-lightbox">
 
   </head>
-  <body>
-<a name="top"></a>
 
+<body>
+<a name="top"></a>
 
 <!--<nav class="navbar fixed-top navbar-expand-lg navbar-default navbar-custom bg-dark"> -->
 <!--<nav class="navbar navbar-light" style="background-color: #e3f2fd;">-->
-<!--<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-danger">-->
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color:#6f42c1;">
   <div class="navbar-brand">
       <a class="navbar-brand mr-4" href="index.html">
-       <font color="black">San Francisco Bay Queer Contra Dance</font></a>
+      <!--<img src="images/circle_left_by_Rebekah_Laurel_Mortensen.jpg" class="img-fluid" style="width:2em; height:2em"/>-->
+      <font color="black">San Francisco Bay Queer Contra Dance</font></a>
   </div>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
@@ -60,15 +62,8 @@
   <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
     <ul class="navbar-nav ml-auto">
       <!--<li class="nav-item ml-auto"><a class="nav-link big" href="#dangertop">When &amp; Where</a></li>-->
-      <!--<li class="nav-item ml-auto"><a class="nav-link big" href="#what">What</a></li>-->
-      <!--<li class="nav-item ml-auto"><a class="nav-link big" href="sfbqcd.html">SFBQCD</a></li>-->
-      <!--<li class="nav-item ml-auto"><a class="nav-link big" href="#conduct">Code of conduct</a></li>-->
-      <!--<li class="nav-item ml-auto"><a class="nav-link big" href="#resources">Resources</a></li>-->
-
-      <li class="nav-item ml-auto"><a class="nav-link big" href="circleleft.html">Circle Left</a></li>
-      <li class="nav-item ml-auto"><a class="nav-link big" href="hands_four.html">Hands Four</a></li>
-      <li class="nav-item ml-auto"><a class="nav-link big" href="https://www.lcfd.org/sf/DanceCamp">Queer Camp</a></li>
       <li class="nav-item ml-auto"><a class="nav-link big" href="#what">What</a></li>
+      <!--<li class="nav-item ml-auto"><a class="nav-link big" href="#about">About</a></li>-->
       <li class="nav-item ml-auto"><a class="nav-link big" href="#conduct">Code of conduct</a></li>
       <li class="nav-item ml-auto"><a class="nav-link big" href="#resources">Resources</a></li>
       <li class="nav-item ml-auto"><a class="nav-link big" href="mailto:queercontra@gmail.com">
@@ -86,76 +81,53 @@
 <div class="topspacer"></div>
 <div class="jumbotron jumbotron-fluid jumboback">
   <div class="container text-center">
-   <h4 class="display-4"><a href="index.html", style="color: #000000"><b>San Francisco Bay Queer Contra Dance</b></a></h4>
-   <font face="Helvetica"><i> 
-     <font color="red">Create and support </font>
-     <font color="orange">spaces where </font>
-     <font color="#fff600">queer people and non-queer people alike </font>
-     <font color="green">can delight </font>
-     <font color="blue">in inclusive gender-role-free </font>  
-     <font color="purple">contra dance communites. </font>
-    </i> </font>
-  <br>
-  <br>
+      <h4 class="display-4">San Francisco Bay Queer Contra Dance</h4>
+      <!--<p class="h4">Gender-free Queer Contra Dance in Oakland, CA.</p>-->
   </div>
 
-  <div class="row justify-content-center" style="padding-left:10%;padding-right:10%">
-     <!--<div class="column" style="padding-right:100px">-->
+  <div class="row justify-content-center" style="padding-left:20%;padding-right:20%">
     <div class="col-lg-4">
     <div class="text-center">
-      <h5><a href="circleleft.html">Circle Left <br/></a>
+      <h5><a href="circleleft.html"><center>Circle Left <br/></center></a>
            <br/>
-           <a href="circleleft.html">
-           <!--<img src="images/circle_left_by_Rebekah_Laurel_Mortensen.jpg" width=250 height="228" class="mr-2 mb-2 img-fluid img-thumbnail rounded center"/>-->
-           <img src="images/circle_left_by_Rebekah_Laurel_Mortensen.jpg" width=250 height="228" /> 
-           </a>
-           <p><small>2nd Friday in Oakland</small></p>
+           <!--<a href="circleleft.html">-->
+           <!--<img src="images/circle_left_by_Rebekah_Laurel_Mortensen.jpg" width=250 class="mr-2 mb-2 img-fluid img-thumbnail rounded center"/>-->
+           <!--</a>-->
+           <!--<center><p><small>2nd Friday in Oakland</small></p></center>-->
         </h5>
      </div>
      </div>
 
-     <!--<div class="column" style="padding-right:100px">-->
     <div class="col-lg-4">
     <div class="text-center">
-      <h5><a href="https://www.lcfd.org/sf/DanceCamp">Queer Contra Camp<br/></a>
+      <h5><a href="https://www.lcfd.org/sf/DanceCamp"><center>Queer Contra Camp<br/></center></a>
            <br/>
-           <a href="https://www.lcfd.org/sf/DanceCamp">
-           <img src="images/qcc.jpg" width=250 height="228"class="center"/>
-          </a>
-          <p><small>2nd weekend in April in Aptos</small></p>
+           <!--<a href="Queer_Camp.html">-->
+           <!--<img src="images/QC_placeholder.jpg" width=250 height="228"class="center"/>-->
+          <!--</a>-->
+           <!--<center><p><small>2nd weekend in April in Aptos</small></p></center>-->
       </h5>
      </div>
      </div>
-     <!--<div class="column">-->
-     <div class="col-lg-4">
-     <div class="text-center">
-      <h5><a href="hands_four.html">Hands Four (NEW!!)<br/></a>
+
+    <div class="col-lg-4">
+    <div class="text-center">
+       <h5><a href="hands_four.html"><center>Hands Four<br/></center></a>
            <br/>
-           <a href="hands_four.html">
-           <img src="images/pa_gender_free_Dane.jpg" width=250 height="228" class="center"/>
-           </a>
-           <p><small>4th Friday in Palo Alto</small></p>
+           <!--<a href="pa.html">-->
+           <!--<img src="images/pa_gender_free_Dane.jpg" width=250 height="228" class="center"/>-->
+           <!--</a>-->
+           <!--<center><p><small>ith Friday in Palo Alto</small></p></center>-->
         </h5>
      </div>
      </div>
   </div>
+
 </div>
 
-<!-- calendar-->
-<div class="container-fluid-iframe anchor-container" style="background-color: #FFFFFF">
-    <div class="col-lg-12">
-    <!--<div class="hidden-phone responsive-iframe-container">-->
-    <!--<div class="embed-responsive embed-responsive-9by4 div_style"">-->
-    <div class="iframe-container">
-    <iframe src="https://calendar.google.com/calendar/embed?mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=255qh518fo2qbmhg51i009l58c%40group.calendar.google.com&amp;color=%23A32929&amp;ctz=America%2FLos_Angeles" style="border-width:0" width="280" height="300" frameborder="0" scrolling="no"></iframe>
-      <!--<iframe src="https://calendar.google.com/calendar/embed?showCalendars=0&amp;mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23853104&amp;src=255qh518fo2qbmhg51i009l58c%40group.calendar.google.com&amp;color=%235229A3&amp;ctz=America%2FLos_Angeles" style="border-width:0" width="950" height="350" frameborder="0" scrolling="no"></iframe>-->
-    </div>
-<!--</div>-->
-</div>
-</div>
 
 <!-- What are we -->
-<div class="container-fluid anchor-container" id="what" style="background-color: #E3E4FA">
+<div class="container-fluid anchor-container" id="what">
     <div class="row justify-content-center">
         <div class="col-lg-10">
            <h2>What is contra dancing?<br/></h2>
@@ -164,25 +136,13 @@
                It's also very difficult to describe, so check out <a href="https://www.youtube.com/watch?v=D9bKVTh-1DU&feature=youtu.be&t=86" target="_blank">this video</a>. 
                </br></br>
 
-               All our dances are called with <b>larks</b> and <b>robins</b> as the names for the two dance roles. That means you can dance with everyone.
+               All our dances are called with <b>larks</b> and <b>ravens</b> as the names for the two dance roles. That means you can dance with everyone. 
                </br></br>
+
                For a more comprehensive introduction on how a contra dance event is organized as well as hearing some contra dancers talking about dancing, check out <a href="https://youtu.be/KBL191jlmGE" target="_blank">this video</a>. 
+
            </p>
         </div>
-        <div class="col-lg-10">
-          <h2>Why Larks and Robins?<br/></h2>
-           <p> Inclusivity has always been one of our goals, and we believe that dance roles should not conflict with people's identities. 
-            For this reason our dances have never used Gents and Ladies as calling terms. 
-            We previously used Larks and Ravens, but learned that 'Raven' is a kinship group identity (moiety) of some indigenous peoples of the Pacific Northwest. 
-            After discussion with members of those communities and contra dancers around the country, we changed our terms to <b>Larks</b> and <b>Robins</b>.
-        </div>
-
-</div>
-</div>
-
-
-<div class="container-fluid anchor-container" id="what">
-    <div class="row justify-content-center">
         <div class="col-lg-10">
            <h2>History<br/></h2>
            <p> 
@@ -195,13 +155,16 @@
             The camp was a wild success, and now occurs annually in April. </br></br>
 
             <b>Circle Left</b> began in January 2013 with the goal of specifically attracting young people and queer people. 
-            Our monthly dance is high energy and holds a strong sense of community. </br></br>
+            Our monthly dance is high energy and holds a strong sense of community. 
+            Originally we used "bands" and "bare arms" to distinguish the dance roles, 
+            but we were one of the first dances to switch to <b>larks</b> and <b>ravens</b>. 
+            Now many dances across the country (and several in the <a href="#resources">Bay Area</a>) are using those terms. </br></br>
 
             <b>Hands Four</b> started in April 2019. 
             Some of us on the Peninsula have been crossing the bay to Circle Left every month over the years.
             To bring the same energy and spread the love of the community to our side of the Bay, 
             Hands Four shares the same goal of attracting young people and queer people, and de-genderize 
-            dancing roles so that everybody can enjoy dancing with everyone else.
+            dancing roles so that everybody can enjoy dancing with everyone else. We also use <b>larks</b> and <b>ravens</b> calling.  
            </p>
         </div>       
     </div>
@@ -266,6 +229,12 @@
       <img src="images/qcc0.jpg" width="800" height="500">
      </a>
     </div>
+    <!--<div class="carousel-item"  style="height:600px">-->
+     <!--<a href="images/queer_ambassador.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">-->
+      <!--<img src="images/queer_ambassador.jpg" width="800" height="500">-->
+     <!--</a>-->
+    <!--</div>-->
+
     <div class="carousel-item" style="height:600px">
      <a href="images/qcdc2019_1.png" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
       <img src="images/qcdc2019_1.png" width="800" height="500">
@@ -319,28 +288,28 @@
 
     <!-- Queer Camp 2019 -->
     <div class="col-lg-3 col-md-6 p-2">
-    <div class="iframe-container-ytb">
+    <div class="iframe-container">
     <iframe width="300" height="150" src="https://www.youtube.com/embed/sMC13qcZzI8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     </div>
  
     <!-- Hands Four 2019 -->
     <div class="col-lg-3 col-md-6 p-2">
-    <div class="iframe-container-ytb">
+    <div class="iframe-container">
         <iframe width="300" height="150" src="https://www.youtube.com/embed/JNfRENIG8Iw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     </div>
  
     <!-- Circle Left-->
     <div class="col-lg-3 col-md-6 p-2">
-    <div class="iframe-container-ytb">
+    <div class="iframe-container">
     <iframe width="300" height="150" src="https://www.youtube.com/embed/xfd0wZ-GPoE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     </div>
 
     <!-- Queer Camp 2018 -->
     <div class="col-lg-3 col-md-6 p-2">
-    <div class="iframe-container-ytb">
+    <div class="iframe-container">
     <iframe width="300" height="150" src="https://www.youtube.com/embed/RNszzBiLd7k?start=24" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     </div>
@@ -351,9 +320,9 @@
 
 <!-- who are we -->
 <div class="container-fluid anchor-container" id="whoarewe">
- <h2>Who are we?<br/></h2>
+<h2>Who Are We<br/></h2>
 
-<div class="row" style="padding-left:5%;padding-right:5%">
+<div class="row randomized" style="padding-left:5%;padding-right:5%">
         <!-- Alan -->
         <div class="rnd-board col-lg-2 col-md-6">
             <h5><img src="images/people/alan.png" class="bio-photo img-fluid img-thumbnail rounded float-left"/>Alan</h5>
@@ -445,11 +414,8 @@
 <div class="container-fluid anchor-container" id="conduct" style="background-color: #E3E4FA">
   <h2>Code of conduct</h2>
      We want all people to feel safe and comfortable at Queer Contra Dance.
-     We value and expect consent and communication, community mindness, and physical safety.
      Harassment of any kind won't be tolerated. 
-     If someone's behavior is offensive or harassing during the dance, we encourage you to speak with one of the <a href="index.html#whoarewe">organizers</a>.
-     <br/><br/>
-     Please read our <a href="SFBQCD_Values_and_Expectations.pdf" target="_blank">Values and Expectations</a> if you would like to know more about our community norms and how we handle unwelcome behavior.
+     If someone's behavior is offensive or harassing during the dance, we encourage you to speak with one of the <a href="sfbqcd.html#whoarewe">organizers</a>.
     <br/><br/>
 </div>
 
@@ -504,7 +470,7 @@
         
         <div class="col-lg-4 col-md-6 p-2">
             <div class="card">
-                <h8 class="card-header"><b>Other nearby dances that use gender neutral language</b></h8>
+                <h8 class="card-header"><b>Other nearby dances that use "larks" and "ravens" or other gender neutral language</b></h8>
                 <div class="card-body">
                  <li><a href="https://bacds.org/series/contra/berkeley_wed">Berkeley Contra - 1st, 3rd, and 5th Wednesday nights</a></li>
                  <!--<li><a href="https://bacds.org/series/contra/san_jose/">South Bay Contra - 3rd Sunday afternoons</a></li>-->
@@ -551,39 +517,228 @@
         </div>
 
 </div>
- 
+    
+<!--<div class="row justify-content-center">-->
+    <!--<div class="col-md-8">-->
+        <!--<div class="row">-->
+            <!--<a href="images/image1.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">-->
+                <!--<img src="images/image1.jpg" class="img-fluid">-->
+            <!--</a>-->
+            <!--<a href="images/image2.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">-->
+                <!--<img src="images/image2.jpg" class="img-fluid">-->
+            <!--</a>-->
+            <!--<a href="images/image3.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">-->
+                <!--<img src="images/image3.jpg" class="img-fluid">-->
+            <!--</a>-->
+        <!--</div>-->
+        <!--<div class="row">-->
+            <!--<a href="https://unsplash.it/1200/768.jpg?image=254" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">-->
+                <!--<img src="https://unsplash.it/600.jpg?image=254" class="img-fluid">-->
+            <!--</a>-->
+            <!--<a href="https://unsplash.it/1200/768.jpg?image=255" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">-->
+                <!--<img src="https://unsplash.it/600.jpg?image=255" class="img-fluid">-->
+            <!--</a>-->
+            <!--<a href="https://unsplash.it/1200/768.jpg?image=256" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">-->
+                <!--<img src="https://unsplash.it/600.jpg?image=256" class="img-fluid">-->
+            <!--</a>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+
+<!-- What are we -->
+<!--<div class="container-fluid anchor-container" id="what"  style="background-color: #FFC0CB">-->
+    <!--<div class="row justify-content-center">-->
+        <!--<div class="col-lg-8">-->
+            <!--<h3>What is contra dancing? <br/></h3>-->
+            <!--<p>-->
+            <!--Contra dance is a centuries-old New England folk dance tradition. It's the rowdy red-headed stepchild of English country dance (the kind of dancing you see in Jane Austen movies). Contra dancing is done to live old-timey music in a variety of styles, from lilting Celtic-inspired tunes to rollicking bluegrass. All dances are taught by a caller, who "calls out" instructions throughout the dance. <br/>-->
+            <!--</p>-->
+            
+            <!--<p>-->
+            <!--It's super fun but also really hard to describe: check out <a href="https://youtu.be/RNszzBiLd7k"> this video</a>, then come to our dance and give it a try! Beginners are always welcome at our dances.-->
+            <!--</p>-->
+        <!--</div>-->
+        <!--<div class="col-lg-8">-->
+            <!--<h3>What does "gender-free" mean?  <br/></h3>-->
+            <!--<p>-->
+            <!--Traditional contra dancing has two roles: "gentlemen" and "ladies." Gender-free contra dancing recognizes that which role you prefer to dance at a particular moment has nothing to do with your gender, and so we call our roles <strong>"Larks" </strong> and <strong>"Ravens"</strong>. <br/>-->
+            <!--</p>-->
+            
+            <!--<p>-->
+            <!--Here are a few links to more in-depth discussions on how gender-free contra has been evolving in the queer and folk communty: <br/>-->
+            <!--<a href="http://www.ruthiebyers.com/2014/12/20/gender-free-berkeley-contra.html">Gender Free Dancing is for Everyone</a>,-->
+            <!--<a href="https://www.jefftk.com/p/gender-free-role-term-usage">Gender-Free Role Term Usage</a>,-->
+            <!--<a href="http://contradances.tumblr.com/post/113203981035/genderfree-contra-dance-term-faq">Genderfree Contra Dance Term FAQ</a>-->
+            <!--</p>-->
+        <!--</div>-->
+        
+        <!--<div class="col-lg-8">-->
+            <!--<h3>This sounds fun, but I have a few more questions: <br/></h3>-->
+            <!--<p>-->
+            <!--<strong>Do I need to know anything about dancing to come to a queer contra?</strong><br/>-->
+            
+            <!--Not at all! Contra dancing has a very gentle learning curve, and all dances are taught from scratch. Before each dance, the caller will talk all dancers through a practice round or two, and then continue to call out prompts during the dance itself.-->
+            
+            <!--Callers do tend to start out with easier dances early in the evening and then build on those, so if you're a rank beginner be sure to arrive promptly to start with the basics.-->
+            <!--</p>-->
+            
+            <!--<p>-->
+            <!--<strong>Do I need a partner?</strong><br/>-->
+            
+            <!--Nope! It's tradition in contra dancing to mix around throughout the evening and dance with many different people (in fact, in some circles it's considered scandalous to dance with the same person twice in one night...strictly one-dance stands for them).-->
+            
+            <!--It's usual to ask strangers to dance, and for strangers to ask you to dance, even if you do come with a partner, so don't be shy to ask someone you've never met before to dance.-->
+            <!--</p>-->
+            
+            <!--<p>-->
+            <!--<strong>What should I wear?</strong><br/>-->
+            
+            <!--Comfortable clothes you can move in (and sweat in) are a must, as are comfortable shoes. You can get extra style points for swirly skirts (on any gender) and shoes that make a satisfying clunk when you stamp your feet during the dance, but neither is necessary.-->
+            <!--</p>-->
+            
+            <!--<p>-->
+            <!--<strong>What else should I bring?</strong><br/>-->
+            
+            <!--A water bottle is convenient for quick swigs in between dances, though tap water and cups are usually also available. We always welcome snacks for our food table. But most importantly, bring yourself and your friends!-->
+            <!--</p>-->
+            
+            <!--<p>-->
+            <!--<strong>I identify as trans. Will I be welcome at queer contra?</strong><br/>-->
+            
+            <!--Absolutely. Queer Contra Dance is committed to providing a trans-inclusive environment. We always have gender-neutral bathrooms at our dances, and welcome any suggestions to make our community as trans-friendly as possible.-->
+            <!--</p>-->
+            <!--<p>-->
+            <!--<strong>Do I have to be l, g, b, t or q to come?</strong><br/>-->
+            
+            <!--Everyone is welcome at Queer Contra Dance! However you identify yourself, if you'd like to give gender-free contra dancing a try and have an affinity for the unconventional, you should fit in fine.-->
+            <!--</p>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+
+
+
+<!--[> Code of Conduct <]-->
+<!--[><div class="container-fluid anchor-container" id="conduct"  style="background-color: #FFC0CB"><]-->
+<!--<div class="container-fluid anchor-container" id="conduct"  style="background-color: #FFFFFF">-->
+<!--<div class="col-lg">-->
+  <!--<h1 class="display-10">Code of conduct [><small class="text-muted">Because it should be fun for everybody.</small> <] </h1>-->
+    <!--<p>-->
+        <!--We want all people to feel safe and comfortable at Queer Contra Dance.-->
+        <!--Harassment of any kind won't be tolerated.-->
+        <!--If someone's behavior is offensive or harassing during the evening, we encourage you to speak with one of the organizers.-->
+    <!--</p>-->
+    <!--</div>-->
+<!--</div>-->
 
 <!-- footer logo -->
 <div class="footer navbar-fixed-bottom">
      <div class="container text-center">
-      <!--<font color="black">For more information, go to <a href="sfbqcd.html">SFBQCD</a></font></br>-->
-      <font color="black">For more information, email: <a href="mailto:queercontra@gmail.com">queercontra@gmail.com</a></font></br>
-      <font color="black">Updated on <script>document.write(document.lastModified.split(" ")[0])</script></font>
+      <!--<a class="navbar-brand mr-4" href="#">-->
+          <!--<img src="images/circle_left_by_Rebekah_Laurel_Mortensen.jpg" class="img-fluid" style="width:2em; height:2em"/>-->
+            <!--<font color="black">San Francisco Bay Queer Contra Dance(<script>document.write(document.lastModified.split(" ")[0])</script>)-->
+           <font color="black">For more information, email: <a href="mailto:queercontra@gmail.com">queercontra@gmail.com</a></font></br>
+           <font color="black">Updated on <script>document.write(document.lastModified.split(" ")[0])</script></font>
+      <!--</a>-->
+     <!--     <small class="text-muted"> <font color="black">San Francisco Bay Queer Contra Dance (<span id="lastModified"></span>)</font></small></a> -->
     </div>
 </div>
 
+
+
     <!-- bootstrap JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <!--<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>-->
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>-->
 
-<script>
-/* random order for board members and other volunteers */
-$.fn.randomize = function(selector){
-    (selector ? this.find(selector) : this).parent().each(function(){
-        $(this).children(selector).sort(function(){
-            return Math.random() - 0.5;
-        }).detach().appendTo(this);
-    });
-
-    return this;
-};
-
-$('.randomized').randomize('.rnd-board');
-$('.randomized').randomize('.rnd-others');
-$('.randomized').randomize('.rnd-emeritus');
-
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+            
+                    <!-- for documentation only -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.2.1/anchor.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function ($) {
+      // delegate calls to data-toggle="lightbox"
+      $(document).on('click', '[data-toggle="lightbox"]:not([data-gallery="navigateTo"]):not([data-gallery="example-gallery-11"])', function(event) {
+          event.preventDefault();
+          return $(this).ekkoLightbox({
+              onShown: function() {
+                  if (window.console) {
+                      return console.log('Checking our the events huh?');
+                  }
+              },
+              onNavigate: function(direction, itemIndex) {
+                  if (window.console) {
+                      return console.log('Navigating '+direction+'. Current item: '+itemIndex);
+                  }
+              }
+          });
+      });
+  
+      // disable wrapping
+      $(document).on('click', '[data-toggle="lightbox"][data-gallery="example-gallery-11"]', function(event) {
+          event.preventDefault();
+          return $(this).ekkoLightbox({
+              wrapping: false
+          });
+      });
+  
+      //Programmatically call
+      $('#open-image').click(function (e) {
+          e.preventDefault();
+          $(this).ekkoLightbox();
+      });
+      $('#open-youtube').click(function (e) {
+          e.preventDefault();
+          $(this).ekkoLightbox();
+      });
+  
+      // navigateTo
+      $(document).on('click', '[data-toggle="lightbox"][data-gallery="navigateTo"]', function(event) {
+          event.preventDefault();
+          return $(this).ekkoLightbox({
+              onShown: function() {
+                  this.modal().on('click', '.modal-footer a', function(e) {
+                      e.preventDefault();
+                      this.navigateTo(2);
+                  }.bind(this));
+              }
+          });
+      });
+  
+      /**
+       * Documentation specific - ignore this
+       */
+      anchors.options.placement = 'left';
+      anchors.add('h3');
+      $('code[data-code]').each(function() {
+  
+          var $code = $(this),
+              $pair = $('div[data-code="'+$code.data('code')+'"]');
+  
+          $code.hide();
+          var text = $code.text($pair.html()).html().trim().split("\n");
+          var indentLength = text[text.length - 1].match(/^\s+/)
+          indentLength = indentLength ? indentLength[0].length : 24;
+          var indent = '';
+          for(var i = 0; i < indentLength; i++)
+              indent += ' ';
+          if($code.data('trim') == 'all') {
+              for (var i = 0; i < text.length; i++)
+                  text[i] = text[i].trim();
+          } else  {
+              for (var i = 0; i < text.length; i++)
+                  text[i] = text[i].replace(indent, '    ').replace('    ', '');
+          }
+          text = text.join("\n");
+          $code.html(text).show();
+  
+      });
+  });
 </script>
 
 <script>
@@ -685,6 +840,7 @@ $(function(){
         document.getElementById("lastModified").innerHTML = "Page last changed " + document.lastModified.split(" ")[0];
     }
 </script>
+
 </body>
 </html>
 
