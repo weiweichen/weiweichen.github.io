@@ -1,0 +1,626 @@
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+%	The MIT License (MIT)
+%
+%	Copyright (c) 2015 Jan Küster
+%
+%	Permission is hereby granted, free of charge, to any person obtaining a copy
+%	of this software and associated documentation files (the "Software"), to deal
+%	in the Software without restriction, including without limitation the rights
+%	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%	copies of the Software, and to permit persons to whom the Software is
+%	furnished to do so, subject to the following conditions:
+%
+%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+%	THE SOFTWARE.
+%
+%
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+
+
+%============================================================================%
+%
+%	DOCUMENT DEFINITION
+%
+%============================================================================%
+
+%we use article class because we want to fully customize the page and dont use a cv template
+\documentclass[10pt,A4]{article}
+
+
+%----------------------------------------------------------------------------------------
+%	ENCODING
+%----------------------------------------------------------------------------------------
+
+%we use utf8 since we want to build from any machine
+\usepackage[utf8]{inputenc}
+
+%----------------------------------------------------------------------------------------
+%	LOGIC
+%----------------------------------------------------------------------------------------
+
+% provides \isempty test
+\usepackage{xifthen}
+\usepackage{enumitem}
+
+%----------------------------------------------------------------------------------------
+%	FONT
+%----------------------------------------------------------------------------------------
+
+% some tex-live fonts - choose your own
+
+%\usepackage[defaultsans]{droidsans}
+%\usepackage[default]{comfortaa}
+%\usepackage{cmbright}
+\usepackage[default]{raleway}
+%\usepackage{fetamont}
+%\usepackage[default]{gillius}
+%\usepackage[light,math]{iwona}
+%\usepackage[thin]{roboto}
+
+% set font default
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[T1]{fontenc}
+
+% more font size definitions
+\usepackage{moresize}
+
+
+%----------------------------------------------------------------------------------------
+%	PAGE LAYOUT  DEFINITIONS
+%----------------------------------------------------------------------------------------
+
+%debug page outer frames
+%\usepackage{showframe}
+
+
+%define page styles using geometry
+\usepackage[a4paper]{geometry}
+
+% for example, change the margins to 2 inches all round
+\geometry{top=2cm, bottom=1cm, left=1.5cm, right=1.5cm}
+
+%use customized header
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+%less space between header and content
+\setlength{\headheight}{-5pt}
+
+
+%customize entries left, center and right
+%\lhead{}
+%\chead{}
+%\rhead{}
+
+
+%indentation is zero
+\setlength{\parindent}{0mm}
+
+%----------------------------------------------------------------------------------------
+%	TABLE /ARRAY DEFINITIONS
+%----------------------------------------------------------------------------------------
+
+%for layouting tables
+\usepackage{multicol}
+\usepackage{multirow}
+
+%extended aligning of tabular cells
+\usepackage{array}
+
+\newcolumntype{x}[1]{%
+>{\raggedleft\hspace{0pt}}p{#1}}%
+
+
+%----------------------------------------------------------------------------------------
+%	GRAPHICS DEFINITIONS
+%----------------------------------------------------------------------------------------
+
+%for header image
+\usepackage{graphicx}
+
+%for floating figures
+\usepackage{wrapfig}
+\usepackage{float}
+%\floatstyle{boxed}
+%\restylefloat{figure}
+
+%for drawing graphics
+\usepackage{tikz}
+\usetikzlibrary{shapes, backgrounds,mindmap, trees}
+
+
+%----------------------------------------------------------------------------------------
+%	Color DEFINITIONS
+%----------------------------------------------------------------------------------------
+
+\usepackage{color}
+
+%accent color
+%\definecolor{sectcol}{RGB}{0,150,255}
+\definecolor{sectcol}{RGB}{0,0,0}
+
+%dark background color
+\definecolor{bgcol}{RGB}{110,110,110}
+
+%light background / accent color
+\definecolor{softcol}{RGB}{205,205,205}
+
+\usepackage{hyperref}
+\usepackage{xcolor}
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor=[RGB]{0 150 255}
+}
+
+%============================================================================%
+%
+%
+%	DEFINITIONS
+%
+%
+%============================================================================%
+
+%----------------------------------------------------------------------------------------
+% 	HEADER
+%----------------------------------------------------------------------------------------
+
+% remove top header line
+\renewcommand{\headrulewidth}{0pt}
+
+%remove botttom header line
+\renewcommand{\footrulewidth}{0pt}
+
+%remove section num
+\renewcommand{\thesection}{}
+
+%----------------------------------------------------------------------------------------
+% 	ARROW GRAPHICS in Tikz
+%----------------------------------------------------------------------------------------
+
+% a six pointed arrow poiting to the left
+\newcommand{\tzlarrow}{(0,0) -- (0.2,0) -- (0.3,0.2) -- (0.2,0.4) -- (0,0.4) -- (0.1,0.2) -- cycle;}
+
+% include the left arrow into a tikz picture
+% param1: fill color
+%
+\newcommand{\larrow}[1]
+{\begin{tikzpicture}[scale=0.58]
+	 \filldraw[fill=#1!100,draw=#1!100!black]  \tzlarrow
+ \end{tikzpicture}
+}
+
+% a six pointed arrow poiting to the right
+\newcommand{\tzrarrow}{ (0,0.2) -- (0.1,0) -- (0.3,0) -- (0.2,0.2) -- (0.3,0.4) -- (0.1,0.4) -- cycle;}
+
+% include the right arrow into a tikz picture
+% param1: fill color
+%
+\newcommand{\rarrow}
+{\begin{tikzpicture}[scale=0.7]
+	\filldraw[fill=sectcol!100,draw=sectcol!100!black] \tzrarrow
+ \end{tikzpicture}
+}
+
+
+
+%----------------------------------------------------------------------------------------
+%	custom sections
+%----------------------------------------------------------------------------------------
+
+% create a coloured box with arrow and title as cv section headline
+% param 1: section title
+%
+\newcommand{\cvsection}[1]
+{
+	\begin{flushleft}
+  \LARGE\textcolor{sectcol}{\textbf{  #1}}
+	\end{flushleft}
+  \vspace{-15pt}
+  \textcolor{softcol}{\hrule}
+  \vspace{8pt}
+}
+
+%create a coloured arrow with title as cv meta section section
+% param 1: meta section title
+%
+\newcommand{\metasection}[3]
+{
+%\begin{tabular*}{1\textwidth}{r r}
+%\footnotesize{#1} \hspace*{\fill} \footnotesize{#2}\hspace*{\fill} \footnotesize{#3}\\[1pt]
+\small{#1} \hspace*{\fill} \small{#2}\hspace*{\fill} \small{#3}\\[1pt]
+%\end{tabular*}
+}
+
+%----------------------------------------------------------------------------------------
+%	 CV EVENT
+%----------------------------------------------------------------------------------------
+
+% creates a stretched box as cv entry headline followed by some paragraphs about
+% the work you did
+% param 1:	event time i.e. 2014 or 2011-2014 etc.
+% param 2:	event name (what did you do?)
+% param 3:	institution (where did you work / study)
+% param 4:	list of paragraphs
+%
+\newcommand{\cvevent}[4]
+{
+
+\begin{tabular*}{1\textwidth}{p{13.6cm}  x{3.9cm}}
+\textbf{#2} - \textcolor{bgcol}{#3} &   \vspace{2.5pt}\textcolor{sectcol}{#1}
+\end{tabular*}
+
+%\textcolor{softcol}{\hrule}
+\vspace{-4pt}
+\begin{itemize}
+ \setlength\itemsep{-0.05cm}
+	\foreach \desc in {#4}{
+    %$\cdot$ \desc\\[3pt]
+    \item \desc
+  }
+\end{itemize}
+\vspace{3pt}
+}
+
+\newcommand{\cveventsum}[5]
+{
+
+\begin{tabular*}{1\textwidth}{p{13.6cm}  x{3.9cm}}
+\textbf{#2} - \textcolor{bgcol}{#3} &   \vspace{2.5pt}\textcolor{sectcol}{#1}
+\end{tabular*}
+
+\vspace{-8pt}
+\begin{description}[leftmargin=*,labelindent=1pt]
+ \item #4
+\end{description}
+%\textcolor{softcol}{\hrule}
+\vspace{-10pt}
+\begin{itemize}
+ \setlength\itemsep{-0.05cm}
+	\foreach \desc in {#5}{
+    %$\cdot$ \desc\\[3pt]
+    \item \desc
+  }
+\end{itemize}
+\vspace{3pt}
+}
+
+\newcommand{\cveventdot}[4]
+{
+
+\begin{tabular*}{1\textwidth}{p{13.6cm}  x{3.9cm}}
+\textbf{#2} - \textcolor{bgcol}{#3} &   \vspace{2.5pt}\textcolor{sectcol}{#1}
+\end{tabular*}
+
+\begin{description}[labelindent=0cm]
+	\foreach \desc in {#4}{
+   \vspace{-6pt}
+   \item \desc
+  }
+\end{description}
+
+\vspace{3pt}
+}
+
+\newcommand{\cveventtwo}[7]
+{
+
+%\begin{tabular}{2\textwidth}{p{13.6cm} x{3.9cm}}
+\begin{tabular*}{2\textwidth}{p{13.6cm} c}
+\textbf{#2} - \textcolor{bgcol}{#3} &   \vspace{2.5pt}\textcolor{sectcol}{#1} \\
+\textbf{#5} - \textcolor{bgcol}{#6}  &   \vspace{2.5pt}\textcolor{sectcol}{#4}
+\end{tabular*}
+
+%\textcolor{softcol}{\hrule}
+\vspace{-4pt}
+\begin{itemize}
+ \setlength\itemsep{-0.05cm}
+	\foreach \desc in {#7} {
+		%$\cdot$ \desc\\[3pt]
+    \item \desc
+	}
+\end{itemize}
+
+\vspace{-2pt}
+\vspace{3pt}
+}
+
+\newcommand{\cveventtwosum}[8]
+{
+
+%\begin{tabular}{2\textwidth}{p{13.6cm} x{3.9cm}}
+\begin{tabular*}{2\textwidth}{p{13.6cm} c}
+\textbf{#2} - \textcolor{bgcol}{#3} &   \vspace{2.5pt}\textcolor{sectcol}{#1} \\
+\textbf{#5} - \textcolor{bgcol}{#6}  &   \vspace{2.5pt}\textcolor{sectcol}{#4}
+\end{tabular*}
+
+\vspace{-8pt}
+\begin{description}[leftmargin=*,labelindent=1pt]
+ \item #7
+\end{description}
+\vspace{-6pt}
+
+%\textcolor{softcol}{\hrule}
+\vspace{-4pt}
+\begin{itemize}
+ \setlength\itemsep{-0.05cm}
+	\foreach \desc in {#8} {
+		%$\cdot$ \desc\\[3pt]
+    \item \desc
+	}
+\end{itemize}
+
+\vspace{-2pt}
+\vspace{3pt}
+}
+
+\newcommand{\cveventtwodot}[7]
+{
+
+%\begin{tabular}{2\textwidth}{p{13.6cm} x{3.9cm}}
+\begin{tabular*}{2\textwidth}{p{16.7cm} c}
+\textbf{#2} - \textcolor{bgcol}{#3} &   \vspace{2.5pt}\textcolor{sectcol}{#1} \\
+\textbf{#5} - \textcolor{bgcol}{#6}  &   \vspace{2.5pt}\textcolor{sectcol}{#4}
+\end{tabular*}
+
+%\textcolor{softcol}{\hrule}
+\vspace{4pt}
+
+	\foreach \desc in {#7} {
+		$\cdot$ \desc\\[3pt]
+	}
+
+\vspace{-2pt}
+\vspace{3pt}
+}
+
+
+
+
+
+% creates a stretched box as
+\newcommand{\cveventmeta}[2]
+{
+	\mbox{\mystrut \hspace{87pt}\textit{#1}}\\
+	#2
+}
+
+%----------------------------------------------------------------------------------------
+% CUSTOM STRUT FOR EMPTY BOXES
+%----------------------------------------- -----------------------------------------------
+\newcommand{\mystrut}{\rule[-.3\baselineskip]{0pt}{\baselineskip}}
+
+%----------------------------------------------------------------------------------------
+% CUSTOM LOREM IPSUM
+%----------------------------------------------------------------------------------------
+\newcommand{\lorem}
+{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.}
+
+%Set header and footerd
+%\fancyhf{} % sets both header and footer to nothing
+\renewcommand{\headrulewidth}{0pt}
+% your new footer definitions here
+\lfoot{weiweic}
+\cfoot{résumé -- \today}
+\rfoot{\thepage}
+
+%============================================================================%
+%
+%
+%
+%	DOCUMENT CONTENT
+%
+%
+%
+%============================================================================%
+\begin{document}
+
+
+%---------------------------------------------------------------------------------------
+%	TITLE HEADLINE
+%----------------------------------------------------------------------------------------
+\vspace{-8pt}
+\begin{center}
+	%\HUGE \textsc{Weiwei Chen}
+	\HUGE Weiwei Chen
+\end{center}
+
+\vspace{6pt}
+
+
+%---------------------------------------------------------------------------------------
+%	META SECTION
+%----------------------------------------------------------------------------------------
+\metasection{\textbf{Homepage:} \href{http://www.cecs.uci.edu/~weiweic}{www.cecs.uci.edu/$\sim$weiweic}}{\textbf{Email:} \href{mailto:weiwei.chen.uci@gmail.com}{weiwei.chen.uci@gmail.com}}
+{\textbf{Phone Number:} (949) 887-6878}
+\vspace{-2pt}
+\vspace{6pt}
+
+\normalsize
+
+%---------------------------------------------------------------------------------------
+% Research Interests
+%----------------------------------------------------------------------------------------
+\vspace{-6pt}
+\cvsection{Research Interests}
+
+\vspace{-4pt}
+\begin{itemize}[leftmargin=*]
+ \setlength\itemsep{-0.5cm}
+  \item Compilers and Frameworks for Machine Learning, High-Performance Computing, and Big Data \\
+  \item Heterogeneous Parallel Programming
+\end{itemize}
+\vspace{8pt}
+
+%============================================================================%
+%
+%	CV SECTIONS AND EVENTS (MAIN CONTENT)
+%
+%============================================================================%
+
+%---------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%--------------------------------------------------------------------------------------
+\vspace{-12pt}
+\cvsection{Education}
+
+\cveventdot{2013}{Ph.D. Electrical and Computer Engineering}{University of California, Irvine}{
+   {Dissertation: Out-of-Order Parallel Discrete Event Simulation for Electronic System Level Design},
+   {Outstanding Dissertation Award, European Design and Automation Association}
+}
+\vspace{-8pt}
+\cveventtwodot{2007}{M.S. Computer Engineering}{Shanghai Jiao Tong University}
+{2004}{B.S. Computer Science and Engineering}{Shanghai Jiao Tong University} {
+}
+\vspace{-30pt}
+
+%---------------------------------------------------------------------------------------
+%	EXPERIENCE
+%----------------------------------------------------------------------------------------
+\cvsection{Experience}
+
+\cveventtwosum{May 2021 - Present}{Senior Principal Engineer}{SambaNova Systems}
+        {Oct 2018 - May 2021}{Principal Engineer}{SambaNova Systems}
+        {{Building Compilers for Coarse-Grain Reconfigurable Dataflow Units (RDUs)}}
+        {
+  {\textbf{Arc} - An MLIR-based DSL and Compiler for stitching high performance tensor operation templates on RDUs,
+    including Layout and Control Analysis, Buffer and Anti-hang Peephole Optimizations, Template Selection and Lowering, etc.
+    One of the first two engineers brought up this layer.},
+  {\textbf{RAIL} - An MLIR-based DSL and Compiler for programming the compute and memory components on RDUs.
+  Founding member of the project and main contributor to the compute component, including syntax design, register allocation,
+  context splitting, latency analysis, etc.},
+  {\textbf{Nova} - PyTorch JIT for RDU, including adding dynamic dispatch key for RDU, RDU compiler integration using lazy tensor, hot/cold caching mechanisms,
+  performance annotation for auto-differentiated graphs, heterogeneous backend enabling for CPU+GPU+RDU, etc.
+  One of the first two engineers bringing up this layer.},
+  {\textbf{Assembler} for multi-generation RDUs, founding member of the project to design and implement an in-house data structure
+  for the memory component and assembler in general.},
+  {Various compiler infrastructure tasks, including LLVM/MLIR version upgrading; architecting and migrating one compiler layer from Python to MLIR in C++;
+  migrating RDU backend from Python to C++; cmake structuring and maintenance; ML model compilation debugging support, etc},
+  {Various compiler PoC projects, including a \href{https://spatial-lang.org}{Spatial}-like RDU compiler in Scala; JAX to RDU lowering;
+  new DSL for RDU programming at higher abstraction level than RAIL, etc.}
+}
+
+\cveventsum{Feb 2016 - Oct 2018}{Founding Software Engineer}{BigStream Solutions}
+  {First Engineer hired to lead software research and development efforts on compilers,
+   native C++ acceleration libraries, tool-chains for FPGA acceleration, and big data system architecture.}
+  {
+  {A dataflow compiler in Scala for Spark SQL query to intermediate representations with three backend for
+   native CPU, FPGA, and RISCV code generation, and a planner for optimized SW/HW accelerator partitioning.},
+  {Native C++ runtime and compiler support for accelerating user-defined functions(UDF) in Scala.},
+  {A C++ native acceleration library with templatized SQL operations, cluster data source support,
+   (HDFS, amazon S3, Microsoft WASB), various input format support (json, avro, parquet, csv)
+   and TensorFlow native integration for data pipelines.},
+  {A Clang-LLVM based high-level synthesis compiler for timing scheduling and code generation for FPGA.},
+  {Various engineering support, including on-premise Hadoop Cluster setup, network performance measurement, etc.}
+}
+
+\pagebreak
+
+\cveventsum{Oct 2013 - Feb 2016}{Senior Engineer}{Qualcomm Research Silicon Valley}
+ {Member of the Pervasive Concurrency team for Qualcomm Symphony System Manager SDK, a task-based parallel programming patterns and runtime for heterogeneous multi-core platforms.}
+{{Heterogeneous parallel pipeline programming pattern API and internal scheduling, task and dataflow API infrastructures,
+parallelize Android native computational photography and enterprise compression applications using task-based parallel patterns,
+power and performance evaluation for native parallel applications, etc.},
+{Compiler frontend analysis and backend code generation for coarse-grain auto-parallelization base on polyhedral optimizations in LLVM.}
+}
+
+\cveventsum{June 2011 - Sept 2011}{Software Develop Engineer Intern}{Microsoft}
+ {Windows Core Security and Identity Public Key Infrastructure Team}
+{
+ {A Windows store application for secure banking on Windows 8.}
+}
+
+%---------------------------------------------------------------------------------------
+%	Patents SECTION
+%--------------------------------------------------------------------------------------
+\cvsection{Patents}
+\vspace{-4pt}
+\begin{itemize}
+ \setlength\itemsep{-0.1cm}
+ \item Iteration Synchronization Construct for Parallel Pipelines (granted), \textcolor{bgcol}{US 15/191,266}
+ \item Systems And Methods For Accelerating Data Operations By Utilizing Native Memory Management (filed),\textcolor{bgcol}{US 62/775,533}
+ \item Systems and Methods for Accelerating Data Operations By Utilizing Dataflow Subgraph Templates (filed), \textcolor{bgcol}{US 16/898,048}
+ \item Compile Time Logic for Inserting a Buffer Between a Producer Operation Unit and a Consumer Operation Unit in a Dataflow Graph (granted), \textcolor{bgcol}{US 17/582,421}
+ \item Compile Time Logic for Detecting Streaming Compatible and Broadcast Compatible Data Access Patterns (filed), \textcolor{bgcol}{US 17/031,679}
+ \item Anti-Congestion Flow Control for Reconfigurable Processors (filed), \textcolor{bgcol}{US 16/890,841}
+ \item Partitioning Dataflow Operations for a Reconfigurable Computing System (filed), \textcolor{bgcol}{US 63/317,476}
+\end{itemize}
+
+%---------------------------------------------------------------------------------------
+%	Publications SECTION
+%--------------------------------------------------------------------------------------
+\cvsection{Publications (selected)}
+\vspace{-4pt}
+\begin{itemize}
+ \setlength\itemsep{-0.1cm}
+\item Weiwei Chen, Xu Han, Rainer Doemer, \textcolor{bgcol}{"May-Happen-in-Parallel Analysis based on Segment Graphs for Safe ESL Models"},
+  in Proceedings of the \emph{Design, Automation and Test in Europe Conference (DATE)}, Dresden, Germany, March 2014 \textbf{(Best Paper Award)}
+ \item Weiwei Chen, Xu Han, Che-Wei Chang, Guantao Liu, Rainer Doemer, \textcolor{bgcol}{"Out-of-Order Parallel Discrete Event Simulation for Transaction Level Models"},
+  \emph{IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD)}, vol.33, no.12, pp.1859-1872, Dec 2014
+ \item 3 Journal papers, 1 Book, 2 Book Chapters, 14 Conference papers, 4 Technical Reports, 4 Poster Presentations,
+  see full list from \href{http://www.cecs.uci.edu/~weiweic/pubs\_by\_type.html}{here}.
+\end{itemize}
+
+%---------------------------------------------------------------------------------------
+% Awards and Honors
+%--------------------------------------------------------------------------------------
+\cvsection{Awards and Honors (selected)}
+\vspace{-4pt}
+\begin{itemize}
+ \setlength\itemsep{-0.1cm}
+ \item 7 Qualstar Awards, Qualcomm Inc. 2014 - 2016
+ \item Outstanding Dissertation Award, European Design and Automation Association (EDAA) 2014
+ \item Best Paper Award, Design, Automation and Test Conference in Europe (DATE) 2014
+ \item Pedagogical Fellowship, UC Irvine 2012-13
+ \item Henry Samueli Endowed Fellowship, UC Irvine 2007
+ \item National Scholarship for Academic Excellence, China 2006
+ \item Exceptional Undergraduate Student Awards, SJTU
+ \item People's Scholarship for Academic Excellence, SJTU 2000-2004
+\end{itemize}
+
+%---------------------------------------------------------------------------------------
+% Skills and Hobbies
+%--------------------------------------------------------------------------------------
+\cvsection{Skills and Hobbies}
+\vspace{-4pt}
+\begin{itemize}
+ \setlength\itemsep{-0.1cm}
+ \item C++ (native), Scala (product), Python (project), Rust (Advent of Code), Git, PyTorch, Vim, GDB, Valgrind, cmake, Latex ...
+ \item Board member of San Francisco Bay Queer Contra Dance
+ \item Fiddling, Reading, Hiking, Folk Dancing, Karate, Sailing, Board Games
+\end{itemize}
+
+\cvsection{Working Status}
+\vspace{-4pt}
+\begin{itemize}
+ \item US Permanent Resident
+\end{itemize}
+
+
+%--------------------------------------------------------------------------------------------------
+%	ARTIFICIAL FOOTER (fancy footer cannot exceed linewidth)
+%--------------------------------------------------------------------------------------------------
+
+%\null
+%\vspace*{\fill}
+%\hspace{-0.25\linewidth}\colorbox{white}{\makebox[1.5\linewidth][c]{\mystrut  \textnormal{\textcolor{sectcol}{www.jankuester.com} $\cdot$ \textcolor{sectcol}{github.com/jankapunkt}}}}
+
+
+
+
+%============================================================================%
+%
+%
+%
+%	DOCUMENT END
+%
+%
+%
+%============================================================================%
+\end{document}
