@@ -42,7 +42,7 @@
         <!--Circle Left <small class="text-muted"> <font color="black">(San Francisco Bay Queer Contra Dance)</font></small></a>-->
   </div>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -82,7 +82,7 @@
       <a href="sfbqcd.html">contra dance</a></strong> in Oakland<br/>
       on the <strong>second Friday</strong> of the month. <br/><small class="text-muted"></small>
       <br/>
-      
+
         <p><i>
           First Unitarian Church of Oakland <br/>
           685 14th Street <br/>
@@ -96,7 +96,7 @@
       $10 general admission <br/>
       Or pay what you can. Everyone's welcome!<br/>
       Cash only, please!<br/><br/>
-      
+
           <li><b>Drive:</b> free street parking</li>
           <li><b>BART:</b>  3 blocks from the 12th St. Station</li>
           <!--<li><b>venue website:</b><a href="http://uuoakland.org/">http://uuoakland.org/</a></li>-->
@@ -106,7 +106,7 @@
            <br>
            Join our <a href="https://docs.google.com/forms/d/e/1FAIpQLSefzecZh4SJK3-90T-cBVvQtDzZM_ukadXfj5ULENmdsuIdWQ/viewform">mailing list</a> to receive monthly reminder emails in the week before Circle Left.
           </p>
-      
+
     </div>
     <!--<div>-->
    <!--<div class="iframe-container">-->
@@ -125,7 +125,7 @@
   <h1 class="display-10">Code of conduct</h1>
     <p>
      We want all people to feel safe and comfortable at Queer Contra Dance.
-     Harassment of any kind won't be tolerated. 
+     Harassment of any kind won't be tolerated.
      If someone's behavior is offensive or harassing during the dance, we encourage you to speak with one of the organizers.
         <!--We want all people to feel safe and comfortable at Queer Contra Dance.-->
         <!--Harassment of any kind won't be tolerated.-->
@@ -134,7 +134,7 @@
     </div>
 </div>
 
-    
+
 <!-- footer logo -->
 <div class="footer navbar-fixed-bottom">
      <div class="container text-center">
@@ -175,8 +175,8 @@ $('.randomized').randomize('.rnd-emeritus');
 <script>
 /* close navbar on click */
 /* from https://stackoverflow.com/questions/14203279/bootstrap-close-responsive-menu-on-click */
-$(function(){ 
-    var navMain = $(".navbar-collapse, .navbar-brand"); 
+$(function(){
+    var navMain = $(".navbar-collapse, .navbar-brand");
     // "a:not([data-toggle])" - to avoid issues caused
     // when you have dropdown inside navbar
     navMain.on("click", "a:not([data-toggle])", null, function () {
@@ -187,11 +187,11 @@ $(function(){
 
 (function(document, history, location) {
  var HISTORY_SUPPORT = !!(history && history.pushState);
- 
+
  var anchorScrolls = {
  ANCHOR_REGEX: /^#[^ ]+$/,
  OFFSET_HEIGHT_PX: 70,
- 
+
  /**
   * Establish events, and fix initial scroll position if a hash is provided.
   */
@@ -200,7 +200,7 @@ $(function(){
  window.addEventListener('hashchange', this.scrollToCurrent.bind(this));
  document.body.addEventListener('click', this.delegateAnchors.bind(this));
  },
- 
+
  /**
   * Return the offset amount to deduct from the normal scroll position.
   * Modify as appropriate to allow for dynamic calculations
@@ -208,7 +208,7 @@ $(function(){
  getFixedOffset: function() {
  return this.OFFSET_HEIGHT_PX;
  },
- 
+
  /**
   * If the provided href is an anchor which resolves to an element on the
   * page, scroll to it.
@@ -217,40 +217,40 @@ $(function(){
   */
  scrollIfAnchor: function(href, pushToHistory) {
  var match, rect, anchorOffset;
- 
+
  if(!this.ANCHOR_REGEX.test(href)) {
  return false;
  }
- 
+
  match = document.getElementById(href.slice(1));
- 
+
  if(match) {
  rect = match.getBoundingClientRect();
  anchorOffset = window.pageYOffset + rect.top - this.getFixedOffset();
  window.scrollTo(window.pageXOffset, anchorOffset);
- 
+
  // Add the state to history as-per normal anchor links
  if(HISTORY_SUPPORT && pushToHistory) {
  history.pushState({}, document.title, location.pathname + href);
  }
  }
- 
+
  return !!match;
  },
- 
+
  /**
   * Attempt to scroll to the current location's hash.
   */
  scrollToCurrent: function() {
  this.scrollIfAnchor(window.location.hash);
  },
- 
+
  /**
   * If the click event's target was an anchor, fix the scroll position.
   */
  delegateAnchors: function(e) {
  var elem = e.target;
- 
+
  if(
     elem.nodeName === 'A' &&
     this.scrollIfAnchor(elem.getAttribute('href'), true)
@@ -259,7 +259,7 @@ $(function(){
  }
  }
  };
- 
+
  window.addEventListener(
                          'DOMContentLoaded', anchorScrolls.init.bind(anchorScrolls)
                          );
