@@ -1,0 +1,235 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Miscellaneous</title>
+
+    <link rel="stylesheet" href="stylesheets/styles_pages.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+              
+    
+          <h1> <a href="index.html" class="class1">Weiwei</a>'s Miscellaneous Notes</h1>
+          <hr>
+        
+        
+        
+        
+          <!--  -->
+          <h1> Useful Commands and Tools</h1>
+          <h3>llvm + clang </h3>
+          <p><ul>
+            <li><a href="http://clang.llvm.org/docs/index.html">clang3.3 documentation</a></li>
+            <li><a href="http://clang.llvm.org/doxygen/">clang API documentation</a></li>
+            <li><a href="https://github.com/hdpatel/systemc-clang">systemc-clang by H. D. Patel @ Github</a></li>
+            <li><a href="http://eli.thegreenplace.net/2012/06/08/basic-source-to-source-transformation-with-clang/">clang src to src transformation</a></li>
+            <li><a href="http://llvm.org/docs/WritingAnLLVMPass.html">Writing an LLVM Pass</a></li>  
+          </p></ul>
+          <br>
+          <hr>
+        <h3>Command Line Editing </h3>
+        <p><ul>
+            <li><a href="http://web.mit.edu/gnu/doc/html/features_7.html">GNU Command Line Editing</a></li>
+            </p></ul>
+        <br>
+        <hr>
+        
+
+        <!--  -->
+        <h3>vim command notes</h3>
+        <p><ul>
+        <li><a href="http://www.moolenaar.net/habits.html">seven habits of effective text editing</a></h3> (text by Bram Moolenaar)
+        <li><a href="http://www.youtube.com/watch?v=eX9m3g5J-XA">seven habits of effective text editing 2.0</a></h3> (video by Bram Moolenaar)
+        
+        <pre><code>
+        :set hlsearch
+        *command
+        ctrl+N: match the function name
+        shift+v => visual mode
+        zf create a fold
+        zd delete a fold
+        za expand/collapse a fold
+        zf7j : create a fold with the consecutive 7 lines
+        </code></pre>
+        
+        <li>swap two lines:</li>
+        <pre><code>
+        ddp
+        ddkkp
+        </pre></code>
+            
+            
+        <li>substitue:</li>
+        <pre><code>
+        :%s/pattern/new/gc
+        </pre></code>
+            
+            <li>duplicate line:</li>
+        <pre><code>
+        :t.
+        </pre></code>
+        
+        <li>make a newline and paste:</li>
+        <pre><code>
+        :jp
+        </pre></code>
+            
+        </p></ul>
+        <br>
+        <hr>
+        
+        <!--  -->
+        <h3>GIT</h3>
+        <p><ul>
+        <li><a href="http://learn.github.com/p/intro.html">introduction to Git</a></li>
+        <li><a href="http://git-scm.com/">Git Homepage</a></li>
+        <li><a href="http://git-scm.com/doc">Git documentation</a></li>
+        
+        <pre><code>
+        $ git config --global user.name "Weiwei Chen"
+        $ git config --global user.email weiwei.chen@uci.edu
+        $ git config --global core.editor vim
+        $ git config --global merge.tool vimdiff
+        
+        $ git config --list
+        $ git config user.name
+        </pre></code>
+        </p></ul>
+        <br>
+        <hr>
+        
+        <!--  -->
+        <h3>Linux (fedora)</h3>
+        <p><ul>
+        <pre><code>
+        $sudo yum install package name
+        
+        $make all &;> make.log
+        $tail -f make.log
+        $find . -name a*
+        
+        In bash, the return value of a program is stored in a special variable called $?.
+        #!/bin/bash
+        cd /dada &;> /dev/null
+        echo rv: $?
+        cd $(pwd) &;> /dev/null
+        echo rv: $?
+        
+        du -sh *
+        
+        ctrl+z, bg
+        
+        tar -tzvf ...
+        
+        chmod -R u+rwX,g+rX,o-rwx /opt/pkg/llvm
+        
+        $killall -9 procname
+        </pre></code>
+            
+        Command line - input
+        
+        <li>Home or Ctrl + a<br>
+        Move the cursor to the beginning of the current line.</li>
+        
+        <li>End or Ctrl + e<br>
+        Move the cursor to the end of the current line.</li>
+        
+        <li>Alt + b<br>
+        Move the cursor to the beginning of the current or previous word. Note that while this works in virtual terminals, it may not work in all graphical terminal emulators, because many graphical applications already use this as a menu shortcut by default.</li>
+        
+        <li>Alt + f<br>
+        Move the cursor to the end of the next word. Again, like with all shortcuts that use Alt as the modifier, this may not work in all graphical terminal emulators.</li>
+        
+        <li>Ctrl + u<br>
+        Erase the current line.</li>
+        
+        <li>Ctrl + k<br>
+        Delete the line from the position of the cursor to the end of the line.</li>
+        
+        <li>Ctrl + w<br>
+        Delete the word before the cursor.</li>
+            
+        </p></ul>
+        <br>
+        <hr>
+        
+        <!--  -->
+        <h3>CVS</h3>
+        <p><ul>
+        <li><a href="http://ximbiot.com/cvs/manual/">Concurrent Versions System CVS</a></h3>
+        <li><a href="http://ximbiot.com/cvs/manual/cvs-1.11.23/cvs.html">CVS Manual</a></h3>
+        <pre><code>
+        cvs -d :ext:weiweic@mu.eecs.uci.edu/home/lecs/cvs import -m “Imported original source code WC, 04/28/12.” project/H.264/jm12.3 weiweic start
+        
+        cvs -d :ext:weiweic@mu.eecs.uci.edu/home/lecs/cvs checkout -P -d jm12.3 -r tag project/H.264/jm12.3
+        
+        cvs update -dP 
+        
+        cvs update -j start_tag -j end_tag
+        
+        cvs status -v
+        
+        cvs status filename
+        </pre></code>
+        </p></ul>
+        <br>
+        <hr>
+            
+            
+        <!--  -->    
+         <h3>   GUI Development</h3>
+         <p><ul>   
+            <h4>SDL</h4>
+            <li><a href="http://www.libsdl.org/intro.en/toc.html">Simple Directmedia Layer (SDL) library</a></li>
+            <li><a href="http://www.libsdl.org/">SDL Introduction</a></li>
+            <li><a href="http://www.libsdl.org/cgi/docwiki.cgi/SDL_API">SDL API Reference</a></li>
+            <li><a href="http://content.gpwiki.org/index.php/SDL:Tutorials:Displaying_a_Bitmap">Tutorial on Displaying a Bitmap</a></li>
+            
+            <h4>GTK</h4>
+            <li><a href="http://www.gtk.org/">The GTK Project</a></li>
+        </p></ul>
+        <br>
+        <hr>
+    <!-- template
+        <h3> <a name="concurrenc" class="class1"></a></h3>
+        <p>
+            <li><a href=""></a></li>
+        </p>
+        <br>
+        <hr>
+     -->
+        
+        
+    <!-- footer -->
+          <p>
+          07/12/13 Weiwei Chen (<a href="mailto:weiwei.chen@uci.edu">weiwei.chen@uci.edu</a>)
+          <br>
+          <small>This page was created using <a href="http://pages.github.com">GitHub Pages</a> &mdash;
+              Theme by <a href="https://github.com/orderedlist">orderedlist</a> and
+              with modifications by <a href="http://www.cecs.uci.edu/~weiweic"> Weiwei Chen</a></small>
+          </p>
+
+    
+          
+    
+   
+        
+      <!-- 
+      <footer>
+        <p><small>This page was created using <a href="http://pages.github.com">GitHub Pages</a> &mdash;
+            Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+      -->
+
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>

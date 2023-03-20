@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Weiwei Chen's Research Work</title>
+
+    <link rel="stylesheet" href="stylesheets/styles_pages.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+              
+    
+          <h1> <a href="index.html" class="class1">Weiwei</a>'s Research Work</h1>
+          
+          <hr>
+        
+          <!-- Multi-core Parallel Simulation for System-Level Description Languages -->
+          <h3> <a name="parsim" class="class1"></a>Multi-core Parallel Simulation for System-Level Description Languages</h3>
+          <p>
+        The large size and complexity of the modern embedded systems poses a great challenge to design and validation. At the so called electronic system level (ESL), designers start with a specification model of the system and follow a systematic top-down design approach to refine the model to different abstraction levels by adding step-by-step implementation details. ESL models are usually written in C-based System-level Description Languages (SLDLs), and contain the essential features such as clear structural and hierarchy, separate computation and communication, and explicit parallelism. The validation of ESL models typically relies on simulation. Fast yet accurate simulation is highly desirable for efficient and effective system design.
+        <br><br>
+        The simulation kernel of the C-based SLDLs is usually based on discrete event (DE) simulation which is driven by events notifications and simulation time advancements. The traditional discrete event simulation, which is used by almost all the existing design tools, is using the cooperative multithreading model to express the explicit parallelisms in ESL models. It only allows one thread to be active at one time which makes it impossible to utilize the multiple computational resources that are very common in today’s multicore simulation hosts. Moreover, the discrete event execution semantics impose a total order on event delivery and time advances for model simulation. The global simulation cycle barrier is a significant impediment to exploit the parallelism during simulation.
+        <br><br>
+        Our work is focused on efficient validation of system-level designs by exploiting the parallel capabilities of today’s multi-core PCs for system level description languages. We contribute in two aspects:
+        <li>Synchronous Parallel Discrete Event Simulation Kernel for SLDLs:<br>
+        We extend the simulation kernel of the SpecC SLDL to support real parallelism during simulation. The shared model resources and synchronizations are protected by automatic model instrumentation to ensure safe communications. This work enables the simulator to utilize the multiple computation resources in the multi-core simulation hosts.</li>
+        <br>
+        <li>Out-of-order Parallel Discrete Event Simulation (OoO PDES):<br>
+        This novel scheduling approach is proposed to address the obstacles to efficient multicore utilization due to the discrete event execution semantics. OoO PDES breaks the global simulation-cycle barrier of traditional DE simulation by localizing the simulation time into each thread, carefully delivering notified events, and handling a dynamic management of simulation sets. Potential conflicts caused by parallel accesses to shared variables and out-of-order thread scheduling are prevented by an advanced predictive static model analyzer in the compiler [3], [4]. With the conflict tables computed by the compiler, the scheduler makes fast and safe decisions at runtime to issue as many safe threads run in parallel as possible. As such, OoO PDES allows the simulator to fully utilize the parallel processing capability of the multicore system to achieve fast speed simulation.</li>
+        <br>
+        We perform simulation experiments on several highly parallel benchmark examples and real-world embedded applications including a JPEG image encoder, a video edge detector, a H.264 video decoder, and a H.264 video encoder. Experimental results show that our approach can achieve significant speedup which is close to theoretical maximum with negligible compilation cost.
+        <br><br>
+        Overall, our work provides an advanced parallel simulation approach for efficient and effective model validation. It helps the embedded system designers to build better products in shorter time-to-market. In future work, we will look into additional methods to further improve the simulation speed, refine the conflict analysis, and push parallel simulation to speedup RTL or instruction set simulation. We are aiming to build the fastest SLDL simulator for ESL design in the world.
+              
+          </p>
+          <hr>     
+        
+        <!-- Recoding diagnosis for parallel system-level embedded application models  -->
+        <h3> <a name="recoding" class="class1">Recoding Diagnosis for Parallel System-Level Embedded Application Models</a></h3>
+        <p>
+            For a top-down system design flow, a well-written specification model of an embedded system is crucial for its successful design and implementation. However, the task of writing a correct system-level model is difficult, as it involves, among other tasks, the insertion of parallelism. In this paper, we focus on ensuring model correctness under parallel execution. In particular, the model must be free of race conditions in all accesses to shared variables, so that a safe parallel implementation is possible. Eliminating race conditions is difficult because discrete event simulation often hides such flaws. In particular, the absence of simulation errors does not prove the correctness of the model.
+        <br><br>
+        We propose two approaches to address this issue:
+        <li> A dynamic appraoch which uses advanced conflict analysis in the compiler, fast checking in a parallel simulator, and a novel race-condition diagnosis tool, that not only exposes all race conditions, but also locates where and when such problems occur. Our experiments have revealed a number of dangerous race conditions in existing embedded multi-media application models and enabled us to efficiently and safely eliminate these hazards.</li><br>
+        <li>A static appraoch which performs advanced static analysis at compile time to guarantee that the parallelism in the model is safe and free from race conditions. The analysis is implemented as part of a designer-in-the-loop recoding approach based on Eclipse platform where the system model is analyzed and recoded using automated functions.Experiments using the tool with a class of graduate students show significant productivity gains and error reduction in model creation.</li>
+        </p>
+        <hr>
+        
+        <!-- ConcurrenC: A Novel Model of Computation for Effective System-level Abstraction of C-based SLDLs -->
+        <h3> <a name="concurrenc" class="class1"></a>ConcurrenC: A Novel Model of Computation for Effective System-level Abstraction of C-based System-Level Description Languages</h3>
+        <p>
+        System design in general can only be successful if it is based on a suitable formal Model of Computation (MoC) that can be well represented in an executable System-level Description Language (SLDL), like SpecC and SystemC, and is supported by a matching set of design tools. While C-based SLDLs are popular in system-level modeling and validation, current tool flows impose almost arbitrary restrictions on the synthesizable subset of the supported SLDL. A properly aligned and consistent system-level MoC is often neglected or even ignored.
+        <br><br>
+        In this project, we motivate the need for a well-defined MoC in system design. We discuss the close relationship between SLDLs and the abstract models they can represent, in contrast to the smaller set of models the tools can support. Based on these findings, we then propose a novel MoC, called ConcurrenC, that defines a clear system level of abstraction, aptly fits system modeling requirements, and can be expressed precisely in both SystemC and SpecC SLDLs. Features like communication and computation separation, hierarchy, concurrency, abstract communications (channels), timing, and execution semantics are explicitly supported for the ConcurrenC MoC. We also discuss the relationship between the existing formal MoCs, like Kahn Process Network (KPN) and Synchronous Dataflow (SDF), and ConcurrenC which is essentially a superset of KPN and SDF. It is a versatile and convenient vehicle to express KPN and SDF models in C-based SLDLs.
+        <br><br>
+        Our research work will focus on defining the formal execution semantics of ConcurrenC, providing advanced scheduling and distributed simulation capabilities, as well as developing a suitable system design flow based on this MoC.
+        </p>
+        <hr>
+        
+        <!-- System Modeling of a Parallel H.264 Decoder in SpecC -->
+        <h3> <a name="h264" class="class1"></a>System Modeling of a Parallel H.264 Decoder in SpecC</h3>
+        <p>
+        H.264 video decoder is a computationally demanding application. In resource-limited embedded environment, it is desirable to exploit parallelism in order to implement a H.264 decoder. Various parallelization is supported by H.264 standard. In this work, we explore possible parallelisms and develop a transaction level model with parallel slice decoders
+        </p>
+        <hr>
+        
+        <!-- Fast simulation for cyclo-static data flow models -->
+        <h3> <a name="cyclostaticsdf" class="class1">Fast Simulation for Cyclo-Static Data Flow Models</a></h3>
+        <p>
+            Embedded system design usually starts from an executable specification model described in a C-based System Level Description Language (SLDL), such as SystemC or SpecC. In this work, we identify a subset of well-defined C-based design models, called periodic ConcurrenC models, that can be statically scheduled, resulting in significant higher simulation and execution speed. We propose a novel heuristic scheduling algorithm that not only is faster than classic matrix-based synchronous dataflow (SDF) scheduling approaches, but also reduces the model execution time by an order of magnitude over the default discrete event simulation.
+        </p>
+        <hr>
+        
+        <!-- Research Work in SJTU -->
+        <h2><a name="sjtuwork" class="class1">Research Work in SJTU</a></h2>
+        
+        <!-- Symbolic Analog Circuit Simulator based on Graph Reduction Algorithm -->
+        <h3> <a name="symbsim" class="class1">Symbolic Analog Circuit Simulator based on Graph Reduction Algorithm</a></h3>
+        <p>Many topological approaches to symbolic network analysis have been proposed in the literature, but none are implemented ultimately as a simulator for large network analysis due to their complexity and exponentially increasing number of terms.  Graph reduction approach based on a set of graph reduction rules have been developed recently in our research group. Binary Decision Diagram is used in the implementation of the symbolic simulator that is capable of analyzing large analog circuit blocks. The simulator is probably the first one ever capable of analyzing large analog circuits (about 20 - 30 transistors) in topological approaches.
+        </p>
+        <hr>
+        
+        <!-- An Efficient Multiprocessor Simulator based on SimpleScalar -->
+        <h3> <a name="simplescalar" class="class1">An Efficient Multiprocessor Simulator based on SimpleScalar</a></h3>
+        <p>
+        In recent years, multi-core processors prove their domination in the area of System-on-Chip (SoC) by penetrating ever more application domains. There are consequently both academic and industrial interests in exploring multi-core architectures in terms of modeling as well as simulation. In this paper, we propose a simulation methodology and implement a multi-core simulator. The multi-core simulator is based on SimpleScalar integrated with a SystemC framework, which deals with communication, and synchronization among different processing modules. Inter-core communication is enabled with a shared memory scheme incorporating a set of shared memory access instructions and communication mechanisms. In addition, a synchronization mechanism, which switches execution of processor components only when communication occurs, is proposed for efficient cooperation among multiple cores on single application. Experimental results show that our simulator correctly simulates the behavior of a multi-core processor as well as inter-core communications. The simulator also demonstrates a convincing performance on Linux PC platforms.
+        </p>
+        <hr>
+        
+        <!-- Portable Media Player on ARM920T Platform -->
+        <h3> <a name="optmp3" class="class1">Portable Media Player on ARM920T Platform</a></h3>
+        <p>
+        A software optimization flow on embedded platform, which mainly includes algorithm optimization, implementation optimization and platform-based optimization is proposed for this project. This flow is applied to the optimization of the MP3 decoder on the low power general-purpose embedded processor ARM platform. The last optimized decoder requires 26.2MIPS and 70Kbytes memory space to decode 128Kbps, 44.1Hz joint stereo MP3 format file in real time.
+        </p>
+        <hr>
+        
+                
+    <!-- template
+        <h3> <a name="concurrenc" class="class1"></a></h3>
+        <p>
+        </p>
+        <hr>
+     -->
+        
+        
+    <!-- footer -->
+          <p>
+          07/12/13 Weiwei Chen (<a href="mailto:weiwei.chen@uci.edu">weiwei.chen@uci.edu</a>)
+          <br>
+          <small>This page was created using <a href="http://pages.github.com">GitHub Pages</a> &mdash;
+              Theme by <a href="https://github.com/orderedlist">orderedlist</a> and
+              with modifications by <a href="http://www.cecs.uci.edu/~weiweic"> Weiwei Chen</a></small>
+          </p>
+
+    
+          
+    
+   
+        
+      <!-- 
+      <footer>
+        <p><small>This page was created using <a href="http://pages.github.com">GitHub Pages</a> &mdash;
+            Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+      -->
+
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
