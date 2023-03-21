@@ -1,0 +1,711 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Professional CV
+% LaTeX Template
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Trey Hunner (http://www.treyhunner.com/)
+%
+% Important note:
+% This template requires the resume.cls file to be in the same directory as the
+% .tex file. The resume.cls file provides the resume style used for structuring the
+% document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{resume} % Use the custom resume.cls style
+
+\usepackage[left=0.5in,top=0.5in,right=0.7in,bottom=0.65in]{geometry} % Document margins
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{longtable}
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage{tocloft}
+\usepackage{fancyheadings}
+\usepackage{verbatim} 
+
+\newcommand{\mypubhl}[6]{
+{#1}, {``\href{#2}{#3}''}, {#4}{\textit{#5}}, {#6}
+\vspace{-0.5em}
+}
+
+\newcommand{\mypub}[5]{
+{#1}, {{``#2''}}, {#3}{\textit{#4}}, {#5}
+\vspace{-0.5em}
+}
+
+
+\begin{document}
+
+\fancyhf{} % sets both header and footer to nothing
+\renewcommand{\headrulewidth}{0pt}
+% your new footer definitions here
+\pagestyle{fancy}
+\lfoot{Weiwei Chen}
+\cfoot{Resume -- \today}
+\rfoot{\thepage}
+
+
+{\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}l}
+\multicolumn{2}{c}{\textbf{\huge Weiwei Chen}}\\
+&\\
+2207 Palo Verde Rd., Irvine, CA 92617 		& Email: \href{mailto:weiwei.chen@uci.edu}{weiwei.chen@uci.edu}\\
+Tel: (949) 887-6878						& Homepage: \hyperref{http://www.cecs.uci.edu/~weiweic}{}{}{www.cecs.uci.edu/$\sim$weiweic}\\			
+\end{tabular*}}
+\\
+
+%----------------------------------------------------------------------------------------
+%	OBJECTIVE
+%----------------------------------------------------------------------------------------
+%\begin{rSection}{Objective}
+%Full-time Software Development Engineer Position
+%\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Education}
+
+{\bf Ph.D. in Computer System and Software} \hfill {\em Summer 2013 (expected)} \\ 
+Department of Electrical Engineering and Computer Science \hfill {\small GPA: 4.0/4.0}\\
+University of California, Irvine \\
+Committee: Prof. Rainer D\"{o}mer, Prof. Daniel D. Gajski, Prof. Brian Demsky
+
+{\bf M.S. in Computer Engineering} \hfill {\em 2007} \\ 
+School of Microelectronics \hfill {\small GPA: 3.88/4.0}\\
+Shanghai Jiao Tong University, China  (National Entrance Exam Waiver)
+
+{\bf B.Eng. in Computer Science and Engineering} \hfill {\em 2004} \\ 
+Department of Computer Science and Engineering  \hfill {\small GPA: 3.7/4.0}\\
+Teaching Reform Class, Shanghai Jiao Tong University, China  (National Entrance Exam Waiver)
+
+{\bf International Exchange Student} \hfill {\em 2003} \\ 
+School of Electrical and Computer Engineering  \hfill {\small GPA: 3.75/4.0}\\
+Purdue University, West Lafayette, Indiana  (Dean's List and Semester Honor)
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Academic Experience}
+%\begin{rSubsection}{University of California, Irvine}{September 2007 - Present}{Graduate Student Researcher}{Irvine, CA}
+
+
+%\begin{rSubsection2}
+{\large
+\emph{\textbf{University of California, Irvine}}\hfill{Irvine, CA}\\
+}
+\textbf{Graduate Student Researcher}\hfill{September 2007 - Present} \\{Department of Electrical Engineering and Computer Science}
+\begin{itemize}
+{\small
+
+\item   \textit{Multi-core parallel simulation for System-Level Description Languages} {\bf (9 publications)} \hfill{Jun. 2009 - Present}\\
+{\footnotesize {\bf Platform/Languages/Technology: Linux / C/C++, SpecC / Multithreaded Programming, }} \\
+Design a synchronous parallel discrete event simulator which is scalable to run on multi-core platforms\\
+Propose an out-of-order parallel simulation approach which can achieve close to theoretic maximum speedup \\
+Propose an optimized compiler for static code analysis on system-level models for efficient parallel simulation \\
+Propose the concept of Segment Graph for C-based system-level description languages based on the control flow graph 
+and language internal representation for simulation conflict checking and race condition detection
+
+\item \textit{A SystemC System-level Description Language Frond-end Tool}  \hfill{Feb. 2013 - Present}\\
+{\footnotesize  {\bf Platform/Languages/Technology: Linux / C/C++, SystemC / LLVM+Clang}} \\
+Design the software architecture of a SystemC front-end tool  by using the \textit{LLVM+Clang} compiler infrastructure, 
+aiming at model analysis and code transformation for simulation on multi-core/many-core platforms \\
+Design and build the compiler internal representation for SystemC models, including the structural hierarchy, port binding information, simulation primitives, and so on
+
+\item  \textit{Recoding diagnosis for parallel system-level embedded application models}   {\bf (2 publications)} \hfill{Jan. 2012 - Present}\\
+{\footnotesize  {\bf Platform/Languages/Technology: Linux / C/C++, SpecC / Static Code Analysis}} \\
+Design and develop a dynamic race condition diagnosis tool for embedded system-level models\\
+Design and develop a static conflict detection kernel for an Eclipse-based recoding tool 
+
+\begin{comment}
+\item \textit{ConcurrenC: a novel Model of Computation (MoC) for effective system-level abstraction of C-based System-Level Description Languages (SLDLs)}  \hfill{June 2008 - June 2009}\\
+Proposed the ConcurrenC MoC with features of communication and computation separation, hierarchy, concurrency, abstract communication, timing, execution semantics, and precisely expressive in both SystemC and SpecC SLDLs
+\end{comment}
+%\item  \textit{Fast simulation for cyclo-static data flow models }\\
+%Proposed a fast simulation strategy for cyclo-static data flow models in SystemC and SpecC by using heuristic static scheduling approaches
+
+\item   \textit{System-level modeling and synthesis for embedded standard applications} {\bf (3 publications)} \hfill{Sept. 2007 - Present}\\
+{\footnotesize  {\bf Platform/Languages/Technology: Linux / SpecC / System-Level Modeling}} \\
+Design and develop parallel system-level models for industrial-sized applications, such as a H.264 video decoder, a Mandelbrot / Julia set graphics application, a JPEG image encoder, a video edge detector, and a DES cipher chip
+}
+\end{itemize}
+%\end{rSubsection2}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textbf{Pedagogical Fellow}\hfill{Academic year 2012-13}\\
+{Teaching, Learning and Technology Center (TLTC) \\ The Henry Samueli School of Engineering}
+\begin{itemize}
+{\small
+\item  \textit{Henry Samueli Teaching Assistant Consultant} \hfill{Sept. 2012 - Present}\\
+Conduct teaching consultations with Teaching Assistants to help them reflect on their teaching experience, and identify the effective teaching methods and strategies
+
+\item  \hyperref{http://www.cecs.uci.edu/~weiweic/teaching.html}{}{}{\textit{Teaching Assistant Professional Development Program (TAPDP 2012)}}   \hfill{Sept 25 - 26, 2012}\\
+Designed the curriculum and led this day-and-a-half discipline-specific, interactive workshop series to prepare graduate students with their instructional careers in UC Irvine. The workshops topics included TA responsibilities, learning styles, active learning strategies, problem solving skills, grading, leading discussion sessions, office hours, and so on
+}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{rSubsection}{University of California, Irvine}{September 2007 - Present}{Teaching Assistant}{Irvine, CA}
+\textbf{Teaching Assistant and Substitute Instructor}\hfill{September 2008 - Present}\\
+{Department of Electrical Engineering and Computer Science}
+\begin{itemize}
+{\small
+%\begin{rSubsection1}{Teaching Assistant and Substitute Instructor}{September 2008 - Present}{Department of Electrical Engineering and Computer Science}
+\item  \textit{Advanced C Programming (EECS 22, EECS 22L)} \hfill{Fall 2011, 2012, Winter 2013} \\
+ \textit{Computational Methods in Electrical and Computer Eng (EECS 10)} \hfill{Fall 2008, 2009, 2010, Summer 2012} \\
+Led discussion and laboratory sections, designed learning activities, designed grading rubrics and scripts for automatic grading programming assignments, held office hours, managed online course message board, prepared the course accreditation (ABET) materials
+
+\item  \textit{Advanced System Software (EECS 211)} \hfill{Winter 2011} \\
+Gave two lectures for memory management in computer systems to graduate students as the substitute instructor
+}
+\end{itemize}
+
+%\end{rSubsection1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\large
+\emph{\textbf{Shanghai Jiao Tong University}}\hfill{Shanghai, China}\\
+}
+\textbf{Graduate Research Assistant}\hfill{December 2004 - January 2007} 
+\begin{itemize}
+{\small
+\item   Developed a symbolic analog circuit simulation using graph reduction approaches
+\vspace{-0.5em} 
+\item   Researched on simulation for heterogeneous multiprocessor systems based on the SimpleScalar toolset
+\vspace{-0.5em} 
+\item   Optimized MP3 decoder algorithm and developed an in-house operating system on the ARM9 platform
+\vspace{-0.5em} 
+\item   Designed the digital circuit for a reconfigurable cache controller and external memory interface module in VerilogHDL
+}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textbf{Teaching Assistant}\hfill{Spring 2005 - Fall 2006}
+\begin{itemize}
+{\small
+%\begin{rSubsection1}{Teaching Assistant and Substitute Instructor}{September 2008 - Present}{Department of Electrical Engineering and Computer Science}
+\item  \textit{FPGA Training Workshop} \\
+Gave lectures and designed the laboratory exercises on embedded system design by using the Xilinx FPGA Embedded Development Kit
+
+\item  \textit{Embedded System Design, Digital Integrated Circuit Design, Design Automation for Integrated Circuit} \\
+Mentored undergraduate students for embedded system design projects; prepared exam, homework, and laboratory assignments for the courses
+}
+\end{itemize}
+
+\end{rSection}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\newpage
+\begin{rSection}{Industry Experience}
+{\large
+\emph{\textbf{Microsoft}}	\hfill{Seattle, WA}\\
+}
+\textbf{Software Development Engineer Intern}\hfill{June 2011 - September 2011} 
+\begin{itemize}
+{\small
+\item Developed a Windows store application for secure banking with cloud roaming features on the Windows 8 Platform in Javascript
+(\hyperref{http://code.msdn.microsoft.com/windowsapps/Metro-style-banking-app-7d963c00}{}{}{Windows 8 banking app with strong authentication sample})
+}
+\end{itemize}
+%%%%
+
+%%%%
+{\large
+\emph{\textbf{IBM China System and Technology Lab (CSTL)}}	\hfill{Shanghai, China}\\
+}
+\textbf{R\&D Engineer Intern}\hfill{June 2006 - April 2007} 
+\vspace{-0.5em}
+\begin{itemize}
+{\small
+\item Developed parallel high-performance sorting algorithms on the CELL Broadband Engine platform
+\vspace{-0.5em}
+\item Research and development for system software for storage devices (C++ and Java) based on 
+\hyperref{http://www.opengroup.org/subjectareas/management/openpegasus}{}{}{the OpenPegasus project}
+}
+\end{itemize}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	HONORS AND AWARDS
+%----------------------------------------------------------------------------------------
+\newpage
+\begin{rSection}{Honors and Awards}
+\begin{itemize}
+{\small
+\item Pedagogical Fellowship, UC Irvine, 2012-13 academic year
+\vspace{-0.5em}
+
+\item Henry Samueli Endowed Fellowship, The Henry Samueli School of Engineering, UC Irvine, 2007
+\vspace{-0.5em}
+
+\item Travel grants, Design Automation Conference (DAC) 2012 and Asia and South Pacific Design Automation Conference (ASP-DAC) 2010
+\vspace{-0.5em}
+
+\item Young Student Support Award, Design Automation Conference (DAC), Anaheim, CA, 2010
+\vspace{-0.5em}
+
+\item Excellent Teaching Assistant Award, School of Microelectronics, Shanghai Jiao Tong University, 2006
+\vspace{-0.5em}
+
+\item  National Scholarship for Academic Excellence, China, 2006
+\vspace{-0.5em}
+
+\item First-round and second-round Exceptional Undergraduate Student, SJTU, 2001, 2003
+}
+\end{itemize}
+\end{rSection}
+
+
+
+%----------------------------------------------------------------------------------------
+%	TECHNICAL STRENGTHS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Skills}
+{\small
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+
+Computer Languages 	& 	Proficient in C/C++, SpecC; Project experience in SystemC, Latex, Java, \\
+					&	JavaScript, shell scripting, VerilogHDL, ARM and Motorola DSP assembly, Scheme \\
+Programming Methods	& 	Data Structure and Algorithms, Computational Complexity, Multithreaded Programming \\
+Operating System		&	Linux / UNIX, Windows, Mac OS X   \\
+Applications			&	GCC, GDB, CVS, Git, Eclipse, Vim, etc. \\
+Foreign Languages		&	speaks and writes fluently in Mandarin Chinese
+\end{tabular}
+}
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	SOFTWARE RELEASES
+%----------------------------------------------------------------------------------------
+\begin{rSection}{SOFTWARE RELEASES}
+{\small
+\begin{itemize}
+\item \textit{SpecC compiler version 2.2.2, Developer Release}\\
+Provided the parallel simulation kernel, the out-of-order parallel simulation kernel, the static code analyzer in the compiler, the race condition diagnosis tool, and 
+extended the simulator support for the SoC Environment (SCE) toolset
+\vspace{-0.5em}
+
+\item \textit{Tool support, System-on-Chip Description and Modeling course (EECS222A), UC Irvine} \\
+Provided the compiler and simulator infrastructure for the Eclipse IDE tool for the recoding projects of this course
+\vspace{-0.5em}
+
+\item \textit{Embedded application models in the example repository for the SoC Environment (SCE) toolset}\\
+Designed an H.264 video decoder model (40k+ lines of code), 
+a JPEG image encoder (2.5k+ lines of code), 
+a video edge detector, and a DES cipher chip model
+\end{itemize}
+}
+\end{rSection}
+
+\vspace{-0.5em}
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Publications}
+
+{\textbf{Journal Articles (peer reviewed)}}
+\vspace{-2mm}
+\begin{enumerate}[\textbf{J\arabic{enumi}.}]
+{\small
+\item 
+	\mypubhl
+	{\textbf{Weiwei Chen}, Xu Han, Rainer D\"{o}mer}
+	{http://www.cecs.uci.edu/~weiweic/publications/IEEEDT2011_WC_XH_RD.pdf}
+	{Multi-Core Simulation of Transaction Level Models using the System-on-Chip Environment}
+	{}
+	{IEEE Design \& Test of Computers}
+	{vol.28, no.3, pp.20-31, May-June 2011}
+%\vspace{-1em}		
+\item 
+	\mypubhl
+	{\textbf{Weiwei Chen}, Xu Han, Che-Wei Chang, Rainer D\"{o}mer}
+	{http://www.cecs.uci.edu/~weiweic/publications/IEEEDT2013_WC_XH_CC_RD.pdf}
+	{Advances in Parallel Discrete Event Simulation for Electronic System-Level Design} 
+	{accepted for publication in }
+	{IEEE Design \& Test of Computers}
+	{to appear in  2013}
+	
+\item  
+	\mypubhl
+	{\textbf{Weiwei Chen}, Xu Han, Che-Wei Chang, Rainer D\"{o}mer}
+	{http://www.cecs.uci.edu/~weiweic/publications/TCAD12_first_submssion_WC_XH_CC_RD.pdf}
+	{Out-of-Order Parallel Discrete Event Simulation for Transaction Level Models} 
+	{in preparation for submission to }
+	{IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD)} 
+	{2013}
+}	
+\end{enumerate}
+%\vspace{0.5em}
+
+%% Conference paper %%
+%\underline
+{\textbf{Conference Papers (peer reviewed)}}
+\vspace{-2mm}
+\begin{enumerate}[\textbf{C\arabic{enumi}.}]
+{\small
+\item
+	\mypubhl
+	{\textbf{Weiwei Chen}, Guoyong Shi}
+	{http://www.cecs.uci.edu/~weiweic/publications/APCCAS2006_WC_GS.pdf}
+	{Implementation of a Symbolic Circuit Simulator for Topological Network Analysis}
+	{in Proceedings of }
+	{the IEEE Asia Pacific Conference on Circuit and System (APCCAS)}
+	{pp.1368-1372, Singapore, December 2006}
+	
+\item
+	\mypubhl
+	{Guoyong Shi, \textbf{Weiwei Chen}, C.-J. Richard Shi}
+	{http://www.cecs.uci.edu/~weiweic/publications/ASPDAC2007_GS_WC_RS.pdf}
+	{A Graph Reduction Approach to Symbolic Circuit Analysis}
+	{in Proceedings of }
+	{the 12th Asia and South Pacific Design Automation Conference (ASP-DAC)} 
+	{pp.197-202, Yokohama, Japan, January 2007}
+
+\item
+	\mypubhl
+	{Rongrong Zhong, Yongxin Zhu, \textbf{Weiwei Chen}, Mingliang Lin, Weng Fai Wong}
+	{http://www.cecs.uci.edu/~weiweic/publications/AINAW2007_RZ_YZ_WC_ML_WW.pdf}
+	{An Inter-core Communication Enabled Multi-core Simulator Based on SimpleScalar} 
+	{in Proceedings of }
+	{the 21st International Conference on Advanced Information Networking and Applications Workshops (AINAW)}
+	{pp.758-763, Niagara Falls, Canada, April 2007}
+	
+\item
+	\mypubhl
+	{\textbf{Weiwei Chen}, Rainer D\"{o}mer}
+	{http://www.cecs.uci.edu/~doemer/publications/ASPDAC_10wc.pdf} 
+	{A Fast Heuristic Scheduling Algorithm for Periodic ConcurrenC Models}
+	{in Proceedings of }
+	{the 15th Asia and South Pacific Design Automation Conference (ASP-DAC)}
+	{pp.161-166, Taipei, Taiwan, January 2010}
+	
+\item
+	\mypubhl
+	{\textbf{Weiwei Chen}, Xu Han, Rainer D\"{o}mer}
+	{http://www.cecs.uci.edu/~doemer/publications/HLDVT_10.pdf}
+	{ESL Design and Multi-Core Validation using the System-on-Chip Environment}
+	{in Proceedings of }
+	{the 15th IEEE International High Level Design Validation and Test Workshop (HLDVT)}
+	{pp.142-147, Anaheim, USA, June 2010}
+	
+	
+\item
+	\mypubhl
+	{Rainer D\"{o}mer, \textbf{Weiwei Chen}, Xu Han, Andreas Gerstlauer}
+	{http://www.cecs.uci.edu/~doemer/publications/ASPDAC_11.pdf}
+	{Multi-Core Parallel Simulation of System-Level Description Languages}
+	{invited paper, in Proceedings of }
+	{the 16th Asia and South Pacific Design Automation Conference (ASP-DAC)}
+	{pp.311-316, Yokohama, Japan, January 2011}
+	
+\item
+	\mypubhl
+	{\textbf{Weiwei Chen}, Rainer D\"{o}mer}
+	{http://www.cecs.uci.edu/~doemer/publications/ASPDAC_12wc.pdf}
+	{An Optimizing Compiler for Out-of-Order Parallel ESL Simulation Exploiting Instance Isolation}
+	{in Proceedings of }
+	{the 17th Asia and South Pacific Design Automation Conference (ASP-DAC)}
+	{pp.461-466, Sydney, Australia, January 2012}
+	
+	
+\item
+	\mypubhl
+	{Rainer D\"{o}mer, \textbf{Weiwei Chen}, Xu Han}
+	{http://www.cecs.uci.edu/~doemer/publications/ASPDAC_12rd.pdf}
+	{Parallel Discrete Event Simulation of Transaction Level Models}
+	{invited paper, in Proceedings of }
+	{the 17th Asia and South Pacific Design Automation Conference (ASP-DAC)}
+	{pp.227-231, Sydney, Australia, January 2012}
+	
+	
+\item
+	\mypubhl
+	{\textbf{Weiwei Chen}, Xu Han, Rainer D\"{o}mer}
+	{http://www.cecs.uci.edu/~doemer/publications/DATE_12.pdf}
+	{Out-of-order Parallel Simulation for ESL design}
+	{in Proceedings of }
+	{the Design, Automation and Test in Europe Conference (DATE)}
+	{pp.141-146, Dresden, Germany, March 2012}
+	
+\item
+	\mypubhl
+	{\textbf{Weiwei Chen}, Che-Wei Chang, Xu Han, Rainer D\"{o}mer}
+	{http://www.cecs.uci.edu/~weiweic/publications/HLDVT2012_WC_CC_XH_RD.pdf}
+	{Eliminating Race Conditions in System-Level Models by using Parallel Simulation Infrastructure} 
+	{in Proceedings of }
+	{the IEEE International High Level Design Validation and Test Workshop (HLDVT)}
+	{pp.118-123, Huntington Beach, USA, November 2012}
+	
+	
+\item
+	\mypubhl
+	{\textbf{Weiwei Chen}, Rainer D\"{o}mer} 
+	{http://www.cecs.uci.edu/~weiweic/publications/DATE2013_WC_RD.pdf}
+	{Optimized Out-of-Order Parallel Discrete Event Simulation Using Predictions}
+	{in Proceedings of }
+	{the Design, Automation and Test in Europe Conference  (DATE)}
+	{pp.3-8, Grenoble, France, March 2013}
+	
+	
+\item
+	\mypub
+	{Xu Han, \textbf{Weiwei Chen}, Rainer D\"{o}mer}
+	{Designer-in-the-Loop Recoding of ESL Models using Static Parallel Access Conflict Analysis}
+	{accepted for publication in }
+	{the workshop on Software and Compilers for Embedded Systems (SCOPES)}
+	{June 2013}%6 pages, Schloss Rheinfels, Germany, June 2013}
+}
+\end{enumerate}
+%\vspace{0.5em}
+
+%\begin{comment}
+%% Book Chapters %%
+{\textbf{Book Chapters}}
+\vspace{-2mm}
+\begin{enumerate}[\textbf{BC\arabic{enumi}.}]
+{\small
+\item 
+	\mypub
+	{\textbf{Weiwei Chen}, Guoyong Shi}
+	{Symbolic Analysis of Analog Integrated Circuits}
+	{}
+	{Embedded Systems and Materials Research for Advanced Applications, the 1st Chinese-German Summer School in Shanghai}
+	{September, 2006, ISBN-10: 3-00-019576-9 / ISBN-13: 978-3-00-019576-1}
+
+\item 
+	\mypubhl
+	{\textbf{Weiwei Chen}, Rainer D\"{o}mer}
+	{http://link.springer.com/chapter/10.1007/978-3-642-04284-3_6}
+	{ConcurrenC: A New Approach towards Effective Abstraction of C-based SLDLs}
+	{}
+	{Analysis, Architectures and Modeling of Embedded Systems (ed. A. Rettberg, M. Zanella, M. Amann, M. Keckeisen, F. Rammig)}
+	{Springer, 2009, ISBN 978-3-642-04283-6}
+}
+\end{enumerate}
+%\vspace{0.5em}
+%\end{comment}
+
+%% Technical Reports %%
+{\textbf{\large Technical Reports}}
+\vspace{-2mm}
+\begin{enumerate}[\textbf{TR\arabic{enumi}.}]
+{\small
+\item
+	\mypubhl
+	{\textbf{Weiwei Chen}, Rainer D\"{o}mer}
+	{http://www.cecs.uci.edu/technical_report/TR08-01.pdf}
+	{System Specification of a DES Cipher Chip}
+	{}
+	{TR-08-01}
+	{Center for Embedded Computer System, UC Irvine, January 2008}
+	
+\item
+	\mypubhl
+	{\textbf{Weiwei Chen}, Siwen Sun, Bin Zhang, Rainer D\"{o}mer}
+	{http://www.cecs.uci.edu/technical_report/TR08-10.pdf}
+	{System Level Modeling of a H.264 Decoder}
+	{}
+	{TR-08-10}
+	{Center for Embedded Computer System, UC Irvine, August 2008}
+	
+\item
+	\mypubhl
+	{\textbf{Weiwei Chen}, Rainer D\"{o}mer}
+	{http://www.cecs.uci.edu/technical_report/TR09-07.pdf}
+	{ConcurrenC: A Novel Model of Computation for Effective Abstraction of C-based SLDLs}
+	{}
+	{TR-09-07}
+	{Center for Embedded Computer System, UC Irvine, May 2009}
+	
+\item
+	\mypubhl
+	{\textbf{Weiwei Chen}, Rainer D\"{o}mer}
+	{http://www.cecs.uci.edu/technical_report/TR11-02.pdf}
+	{A Distributed Parallel Simulator for Transaction Level Models with Relaxed Timing}
+	{}
+	{TR-11-02}
+	{Center for Embedded Computer Systems, UC Irvine, May 2011}
+	
+\item
+	\mypubhl
+	{Xu Han, \textbf{Weiwei Chen}, Rainer D\"{o}mer}
+	{http://www.cecs.uci.edu/technical_report/TR11-03.pdf}
+	{A Parallel Transaction-Level Model of H.264 Video Decoder}
+	{}
+	{TR-11-03} 
+	{Center for Embedded Computer Systems, UC Irvine, June 2011}
+}
+\end{enumerate}
+%\vspace{0.5em}
+
+{\textbf{\large Presentations}}
+\vspace{-2mm}
+\begin{itemize}
+{\small
+\item {\em IESS'09, ASP-DAC'10, ASP-DAC'12, DATE'12, DAC'12, HLDVT'12,  DATE'13} 
+}
+\end{itemize}
+\vspace{-2mm}
+
+\begin{comment}
+{\textbf{Poster Presentations}}
+\vspace{-2mm}
+\begin{enumerate}[\textbf{P\arabic{enumi}.}]
+{\small
+\item
+	\mypub
+	{\textbf{Weiwei Chen}, Rainer D\"{o}mer}
+	{Parallel Discrete Event Simulation for ESL Design} 
+	{in } 
+	{SIGDA Ph.D. Forum at the Design Automation Conference (DAC)}
+	{San Francisco, USA, June 2012}
+	
+\item	
+	\mypub
+	{\textbf{Weiwei Chen}, Rainer D\"{o}mer}
+	{Out-of-order Parallel Discrete Event Simulation for ESL Design}
+	{}
+	{Graduate Student Poster Presentation}
+	{Faculty Retreat, Department of Electrical Engineering and Computer Science, UC Irvine, September 2012}
+	
+\item	
+	\mypub
+	{\textbf{Weiwei Chen}, Rainer D\"{o}mer}
+	{Out-of-order Parallel Simulation for Electronic System-Level Design}
+	{in the }
+	{EDAA/ACM SIGDA PhD Forum at the Design, Automation and Test in Europe Conference (DATE)}
+	{Grenoble, France, March 2013}
+}
+\end{enumerate}
+\end{comment}
+
+\end{rSection}
+
+\begin{comment}
+%----------------------------------------------------------------------------------------
+%	PROFESSIONAL ACTIVITIES AND SERVICES
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Professional Activities and Services}
+{\small
+\textbf{Invited Talks}
+\vspace{-2mm}
+\begin{enumerate}[\textbf{T\arabic{enumi}.}]
+\item
+	\mypub
+	{Invited Lecture}
+	{Discussion for C-based SLDLs: SpecC and SystemC} 
+	{}
+	{SoC Description and Modeling (EECS 222A)}
+	{UC Irvine, December 4, 2009}
+	
+\item
+	\mypub
+	{Invited Talk}
+	{Internship in Microsoft}
+	{}
+	{Group Seminar}
+	{Center for Embedded Computer Systems, University of California at Irvine, October 14, 2011}
+	
+	
+\item Invited Talk, ``Multi-Core Parallel Simulation of System-Level Description Languages'', School of Microelectronics, Shanghai Jiao Tong University, December 26, 2011
+	
+\item 
+	\mypub
+	{Contributed to Invited Talk, Rainer D\"{o}mer, Weiwei Chen, Xu Han} 
+	{Advances in Parallel Discrete Event Simulation For Embedded System Design}
+	{}
+	{EECS Colloquium}
+	{University of California at Irvine, May 9, 2012}
+	
+\item 
+	\mypub
+	{Contributed to Invited Talk, Rainer D\"{o}mer, Weiwei Chen, Xu Han}
+	{Advances in Parallel Simulation of System Models}
+	{}
+	{EECS Colloquium} 
+	{University of California at Irvine, October 17, 2012}
+	
+\item Invited Talk, ``Out-of-order Parallel Discrete Event Simulation for Electronic System-Level Design'', School of Microelectronics, Shanghai Jiao Tong University, China, December 12, 2012
+
+\item Invited Talk, ``Out-of-order Parallel Simulation for Electronic System-Level Design'', Department of Computer Science, The Carl von Ossietzky University of Oldenburg, Germany, March 14, 2013
+
+\end{enumerate}
+%\newpage
+\textbf{Conference Reviewer}
+\vspace{-2mm}
+\begin{itemize}
+\item {Design Automation Conference (DAC) 2009, 2010, expert reviewer 2013}
+\item {Design, Automation and Test in Europe Conference (DATE) 2010, 2011, 2013}
+\item {ACM/IEEE International Conference on Formal Methods and Models for Co-design (MEMOCODE) 2010}
+\item {International Conference on Hardware/Software Co-design and System Synthesis (CODES+ISSS) 2010, 2012}
+\end{itemize}
+
+}
+\end{rSection}
+\end{comment}
+
+%----------------------------------------------------------------------------------------
+%	ACTIVITIES
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Association Membership and ACTIVITIES}
+{\small
+\begin{itemize}
+\item IEEE Computer Society Student Member, since 2008
+\vspace{-0.5em}
+\item Vice Commodore and Capri Skipper, UCI Sailing Association
+\end{itemize}
+}
+\end{rSection}
+
+\vspace{-0.5em}
+%----------------------------------------------------------------------------------------
+%	WORKING STATUS
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Working Status}
+\begin{itemize}
+\item International student, F-1 visa
+\end{itemize}
+\end{rSection}
+
+
+%----------------------------------------------------------------------------------------
+%	REFERENCES
+%----------------------------------------------------------------------------------------
+%\vspace{0.5em}
+\centerline{
+\textit{References are available upon request!}
+}
+%----------------------------------------------------------------------------------------
+%	EXAMPLE SECTION
+%----------------------------------------------------------------------------------------
+
+%\begin{rSection}{Section Name}
+
+%Section content\ldots
+
+%\end{rSection}
+
+%----------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+\end{document}
