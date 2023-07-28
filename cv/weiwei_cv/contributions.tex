@@ -1,0 +1,48 @@
+
+% references.tex
+%Curriculum Vitae, Weiwei Chen, 11/12/12 first version
+
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+% (c) 2008-2012 Nathaniel Johnston <nathaniel@njohnston.ca> http://www.njohnston.ca
+% (c) 2012	Weiwei Chen <weiwei.chen@uci.edu> http://www.cecs.uci.edu/~weiweic
+%
+% Depending on your TeX distribution, you may need to download the revnum and longtable packages for this template to work!
+%
+%This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
+%\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{RESEARCH ACCOMPLISHMENTS IN MY FIELD}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Computers are ubiquitous in our modern society. The rapid growth of application complexities imposes an imperative need on high computational capacities. However, the fundamental physical bottleneck prevents single hardware unit from increasing processing frequency indefinitely for high performance. The shift towards multi-core and many-core systems is inevitable to improve the computing capabilities in the future. 
+\bigskip
+
+In order to exploit the multiple computational resources on the hardware platform, software need to be written in the way that many calculations are carried out concurrently. Parallel programming breaks the program into independent pieces so that they can be executed simultaneously on each processing elements. Parallel programing also makes it possible to save energy consumptions by finishing the work on time without increasing the processor frequency. 
+\bigskip
+
+Parallel programming is not an easy task since most of the programming languages and existing programs are designed and written in a sequential way. Compiler technologies have been proposed to automatically parallelizing the sequential part of a program to run on multi-core computers. However, existing approaches can only handle some special cases in a program, such as loops. It is still not feasible to parallelize a whole piece of program without any manual work. On the other hand, new programming languages, such as OpenMP, Cilk, CUDA, are proposed so as to write a parallel program from scratch. Parallel programming models, such as  shared memory, message passing, and task parallelism, are also developed to provide better abstractions to the programmer so that they can focus more on designing their algorithms without worrying to much on the underlying parallelizing details on the hardware platform. 
+\bigskip
+
+Parallel computing is pervasive in almost all the computational applications, including scientific computations, networking systems, computer vision, machine learning, as well as mobile consumer applications. It is a collaboration work among advanced hardware design, operating system support, compiler technology and parallel algorithms for domain specific applications. Parallel computing is one of the most fundamental and needed technologies for tomorrow's computational world.  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\resheading{RESEARCH ACCOMPLISHMENTS IN MY FIELD}
+\resheading{VALUES OF BENEFITS OF MY PROJECTS}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+My research work falls into the realm of parallel computing for embedded and mobile computer systems. 
+
+\bigskip
+My Ph.D. dissertation research has been focusing on parallel simulation approaches for system-level description languages (SLDLs) in which most embedded system models are described. 
+Embedded computing systems have a profound impact on our everyday life with a wide application domain. More than 90\% of the computer systems in the world are now embedded. Embedded systems are usually designed for a specific purpose with very strict design requirements. To design an embedded system, engineers start from capturing the critical features of the design in an abstract model, and then refine it step by step to final the implementation. Typically, these models are written in SLDLs and validated through simulation. 
+
+\bigskip
+My Ph.D. work extents the existing sequential discrete event simulation kernel for SLDLs to support parallel simulation on multicore simulation hosts. In addition to the parallel extension, I also proposed the out-of-order parallel simulation approach to parallelize the simulation more aggressively without loss of accuracy. My work makes it possible for SLDL simulators to exploit the multicore computational capability that are commonly available nowadays in a most efficient way. It has been published in more than 10 peer-reviewed papers and acknowledged by the design automation community with an outstanding dissertation award and one best paper award. A research project has also been funded by Intel to port this technology into industrial usage. 
+
+\bigskip
+Now I am working with the Qualcomm Research Silicon Valley on the project of Multicore Asynchronous Runtime Environment (MARE). Our work aims at providing a general parallel programming model for programmers to easily design their algorithms and fully exploit the potential computational resources on multicore platforms. We are building the task-based parallel infrastructure and designing parallel programming patterns to capture the high-level essential abstractions of common algorithms, including linear algebra computation, image processing and other parallel patterns. With our runtime library, engineers can focus on designing their parallel algorithms without being distracted by the complexity of the traditional multithreading programming paradigm and be able to optimize their code on hardware platforms with heterogenous computing units including CPUs, graphics processing unit (GPU), digital signal processor (DSP) and other hardware accelerators. 
+
+\bigskip
+Parallel programming is the cornerstone for the future computation world. It brings the great potential of high execution performance and low energy consumption. The contributions of my research work can help the engineers to build and validate their designs in an efficient way which lead to lower production prices and shorter time-to-market. The engineers can therefore be freed from dealing with complex low-level implementation details but focus on designing their algorithms to bring more applications with sophisticated functionalities. In other words, my work is promising to benefit the national interests with advancing computational technologies, reduced energy usage, and improving economy with more efficient consumer and industrial electronics. 
+
+

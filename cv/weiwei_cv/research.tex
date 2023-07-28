@@ -1,0 +1,132 @@
+
+% research.tex
+%Curriculum Vitae, Weiwei Chen, 11/12/12 first version
+
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+% (c) 2008-2012 Nathaniel Johnston <nathaniel@njohnston.ca> http://www.njohnston.ca
+% (c) 2012	Weiwei Chen <weiwei.chen@uci.edu> http://www.cecs.uci.edu/~weiweic
+%
+% Depending on your TeX distribution, you may need to download the revnum and longtable packages for this template to work!
+%
+%This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{RESEARCH INTERESTS}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{1mm}
+\begin{itemize}
+\item Compiler for ML, HPC, BigData, etc
+\item Big Data System Architecture and Acceleration
+\item Heterogeneous Parallel Programming and Compilers
+\item System-level Modeling, Validation, and Analysis
+\end{itemize}
+%\begin{center}\begin{longtable}{l@{\extracolsep{\fill}}r}
+%		\multicolumn{2}{l}{\textbf{Parallel computing}}\\
+%		\multicolumn{2}{l}{\textbf{Design automation for embedded computer systems}}\\
+%		\multicolumn{2}{l}{\textbf{Embedded system-level modeling, validation, and analysis}}\\
+%		\multicolumn{2}{l}{\textbf{Embedded hardware and software systems}}\\
+%\vphantom{E}
+%\end{longtable}
+%\end{center}\vspace{-36pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{RESEARCH AND WORKING EXPERIENCE}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\textbf{AxStream}
+%\ressubheadinga{Software Engineer}{February 2016 -- Present}
+%Stealth mode startup for big data acceleration
+
+\textbf{Modular}
+\ressubheadinga{Staff Engineer}{May 2023 -- Present}
+
+\vspace{2mm}
+Compiler for the \href{https://www.modular.com/mojo}{Mojo} programming language.
+\vspace{2mm}
+
+\textbf{SambaNova Systems}
+\ressubheadinga{Senior Principal Engineer}{May 2021 -- May 2023}
+\ressubheadinga{Principal Engineer}{October 2018 -- April 2021}
+
+\vspace{2mm}
+Founding member of the compiler team that builds the compiler stack for the new HW architecture with reconfigurable dataflow units (RDUs): 
+MLIR-based graph compiler, kernel compiler, DSLs for RDU, PyTorch framework integration, other SW infrastructure related work.
+\vspace{2mm}
+
+
+\textbf{BigStream}
+\ressubheadinga{Founding Software Engineer}{February 2016 -- October 2018}
+
+\vspace{2mm}
+Lead software research and development efforts on compilers, native C++ big data acceleration runtime libraries, tool-chains for hardware acceleration (FPGA) technology, and big data system architecture.
+\begin{itemize}
+\item Native runtime and compiler support for accelerating big data user-defined functions (UDF).
+\item A dataflow compiler with Spark SQL frontend, query intermediate representations, three backend for native, FPGA, and RISCV code generation, and a planner for optimized SW/HW accelerator partitioning.
+\item A C++ native acceleration library with templatized SQL operations, cluster data source support (HDFS, amazon S3, Microsoft WASB), various input format support (json, avro, parquet, csv, ...), and tensorflow native integration for data pipelines.
+\item Spark dataframe and RDD APIs for native and hardware acceleration. 
+\item A Clang-LLVM based high-level synthesis compiler for timing scheduling and code generation of FPGA accelerators.
+\item On premise Hadoop Cluster setup, and network performance measurement. 
+\end{itemize}
+\vspace{2mm}
+
+%\begin{itemize}
+%\item Spark SQL native software acceleration, including a query compiler, a native C++ acceleration library, integrations of  
+%\item Two compilers (in LLVM and Scala) for seamless connection between high-level big data applications with backend acceleration technologies.  
+%\item Backend acceleration libraries for big data applications
+%\item Network performance tuning and measurement
+%\item (Other things and details that I am not allowed to mention before we exit stealth mode)
+%\end{itemize}
+
+\textbf{Qualcomm Research Silicon Valley} \\
+\ressubheadinga{Senior Engineer}{October 2013 -- Feburary 2016}
+%\begin{itemize}
+
+\vspace{2mm}
+Parallel programming patterns and runtime for heterogeneous multi-core platforms, 
+%  \textit{Qualcomm Symphony System Manager SDK \\
+%  (previously know as Qualcomm Multicore Asynchronous Runtime Environment, i.e. MARE,  %\href{http://developer.qualcomm.com/symphony}{http://developer.qualcomm.com/symphony})}
+ \textbf{Qualcomm Symphony System Manager SDK} \href{http://developer.qualcomm.com/symphony}{http://developer.qualcomm.com/symphony}
+
+\begin{itemize}
+\item Heterogeneous Parallel Pipeline Pattern API and internal scheduling
+\item Task and dataflow API infrastructures
+\item Parallelize Android native computational photography and enterprise compression applications using task-based parallel programming patterns
+\item Power and performance evaluation for native parallel applications
+\end{itemize}  
+  
+%\item 
+\vspace{2mm}
+Compiler front-end analysis and back-end code generation for coarse-grain auto-parallelization base on Polyhedral Optimizations in LLVM (llvm-polly). 
+\vspace{4mm}
+%\end{itemize}
+
+
+\textbf{University of California, Irvine} \\
+\ressubheadinga{Graduate Student Researcher, Department of EECS}{September 2007 -- 2013}
+\begin{itemize}
+\item  {Multi-core parallel simulation for Transaction-Level Models (TLMs)} \\
+\item  {Recoding diagnosis for parallel system-level embedded application models}  \\
+\item  {A SystemC frond-end using Clang tooling} \\
+\item  {System-level modeling and synthesis for parallel embedded standard applications} \\
+%\item  {Fast simulation for cyclo-static data flow models } \\
+\item  {ConcurrenC: a novel Model of Computation (MoC) for effective system-level abstraction of C-based System-Level Description Languages (SLDLs)} \\
+\end{itemize}
+
+\textbf{Microsoft, Redmond, WA}\\
+\vspace{-2mm}
+\begin{itemize}
+\item 
+\ressubheadinga{Software Develop Engineer Intern	}{ June 2011 -- September 2011}
+\textit{Windows Core Security and Identity Public Key Infrastructure Team} \\
+Developed a Windows store application for secure banking with cloud roaming features on the Windows 8 Platform in Javascript
+(\hyperref{http://code.msdn.microsoft.com/windowsapps/Metro-style-banking-app-7d963c00}{}{}{Windows 8 banking app with strong authentication sample})
+\end{itemize}
+
+\textbf{Shanghai Jiao Tong University}\\
+\ressubheadinga{Graduate Research Assistant, School of Microelectronics}{~~~December 2004 -- January 2007}
+\begin{itemize}
+\item   A symbolic analog circuit simulation using graph reduction approaches
+\item   Simulation for heterogeneous multiprocessor systems based on the SimpleScalar toolset
+\item   MP3 decoder algorithm optimization for DSP and an in-house operating system on ARM9 platform
+\item   Digital circuit design for a reconfigurable cache controller and external memory interface module in VerilogHDL
+\end{itemize}
