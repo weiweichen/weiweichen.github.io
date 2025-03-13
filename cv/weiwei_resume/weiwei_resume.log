@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  28 JUL 2023 01:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  13 MAR 2025 09:50
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1260,31 +1260,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 481--481
  []
 
 
-Overfull \hbox (9.77357pt too wide) in alignment at lines 492--492
+Underfull \hbox (badness 10000) in alignment at lines 493--493
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 513--513
+Overfull \hbox (512.14963pt too wide) in paragraph at lines 493--493
 [][] 
  []
 
 
-Overfull \hbox (512.14963pt too wide) in paragraph at lines 513--513
+Underfull \hbox (badness 10000) in alignment at lines 514--514
 [][] 
  []
 
 
-Overfull \hbox (9.77357pt too wide) in alignment at lines 527--527
+Overfull \hbox (512.14963pt too wide) in paragraph at lines 514--514
+[][] 
+ []
+
+
+Overfull \hbox (9.77357pt too wide) in alignment at lines 528--528
 [][] 
  []
 
 LaTeX Font Info:    Font shape `T1/Raleway-TLF/m/sl' in size <10> not available
 
 (Font)              Font shape `T1/Raleway-TLF/m/it' tried instead on input lin
-e 530.
+e 531.
 LaTeX Font Info:    Font shape `T1/Raleway-TLF/m/it' will be
-(Font)              scaled to size 10.0pt on input line 530.
+(Font)              scaled to size 10.0pt on input line 531.
 
 Package Fancyhdr Warning: \headheight is too small (-5.0pt): 
  Make it at least 12.0pt.
@@ -1297,12 +1302,12 @@ Overfull \vbox (5.0pt too high) has occurred while \output is active []
  [1
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (9.77357pt too wide) in alignment at lines 537--537
+Overfull \hbox (9.77357pt too wide) in alignment at lines 538--538
 [][] 
  []
 
 
-Overfull \hbox (9.77357pt too wide) in alignment at lines 543--543
+Overfull \hbox (9.77357pt too wide) in alignment at lines 544--544
 [][] 
  []
 
@@ -1316,24 +1321,24 @@ Package Fancyhdr Warning: \headheight is too small (-5.0pt):
 Overfull \vbox (5.0pt too high) has occurred while \output is active []
 
  [2]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 632.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 632.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 633.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 633.
 
 (./weiwei_resume.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 632.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 632.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 633.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 633.
 Package rerunfilecheck Info: File `weiwei_resume.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 632.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 633.
  ) 
 Here is how much of TeX's memory you used:
  19676 strings out of 493089
  393854 string characters out of 6134842
- 495363 words of memory out of 5000000
+ 495364 words of memory out of 5000000
  22758 multiletter control sequences out of 15000+600000
  114676 words of font info for 30 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1344,7 +1349,7 @@ r/local/texlive/2015/texmf-dist/fonts/type1/impallari/raleway/Raleway-Bold.pfb>
 c.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/impallari/raleway/Raleway
 -Regular.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmsy10.pfb>
-Output written on weiwei_resume.pdf (2 pages, 76243 bytes).
+Output written on weiwei_resume.pdf (2 pages, 76270 bytes).
 PDF statistics:
  42 PDF objects out of 1000 (max. 8388607)
  33 compressed objects within 1 object stream
